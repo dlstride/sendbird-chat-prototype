@@ -1,0 +1,94 @@
+﻿
+
+<div class="wrapper wrapper-content animated fadeInRight">
+
+    <div class="row dls-select-channel" ng-if="selectedChannelUrl.length === 0" >
+        Select a channel
+    </div>
+
+    <div class="row" ng-if="selectedChannelUrl.length > 0">
+        <div class="col-lg-12">
+
+            <div class="ibox chat-view">
+
+                <div class="ibox-title">
+                    <span ng-if="!directMessageGroup && selectedChannelName.length > 0">#</span>
+                    <i ng-if="directMessageGroup && selectedChannelName.length > 0" class="glyphicon glyphicon-user"></i>
+                    <span class="dls-selected-channel-name">{{selectedChannelName}}</span>
+
+                    <a ng-click="leaveDmChannel()" data-rel="tooltip" class="pull-right" title="Leave DM Channel"  ng-if="directMessageGroup">
+                        <span class="glyphicon glyphicon-minus-sign text-muted"></span>
+                    </a>
+
+                    <br/>
+
+                    <small class="text-muted" ng-if="selectedChannelName.length > 0">{{channelMembers.length}} members</small>
+                    <small class="pull-right text-muted">Last message: Mon Jan 26 2015 - 18:39:23</small>
+
+                </div>
+
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-md-9 ">
+                            <div id="chat-discussion-div" class="chat-discussion">
+                                
+                                <div class="dls-load-messages" ng-click="loadMoreChats()" 
+                                     ng-if="moreMessagesToLoad && selectedChannelUrl.length > 0">Load More Messages</div>
+
+                                <div data-ng-repeat="chat in chatDiscussions" class="chat-message left">
+                                    <img class="message-avatar" src="{{chat.image}}" alt="" ng-if="!chat.isSystemMessage">
+                                    <div class="message" ng-if="!chat.isSystemMessage">
+                                        <a class="message-author" href="#"> {{chat.userName}} </a>
+                                        <span class="message-date"> {{chat.date | date:'MM/dd/yyyy @ h:mma'}} </span>
+                                        <span class="message-content" ng-if="chat.isMessage">
+                                                {{chat.message}}
+                                            </span>
+                                        <div ng-if="chat.isFileMessage" class="dls-chat-file">
+                                            <span> [ FILE ] </span><a href="{{chat.fileUrl}}" target="_blank">{{chat.fileName}}</a>
+                                        </div>
+                                        <div ng-if="chat.isImage" class="dls-chat-image">
+                                            <img src="{{chat.fileUrl}}"/>
+                                        </div>
+                                    </div>
+                                    <div class="message" ng-if="chat.isSystemMessage">
+                                        <span class="message-content dls-system-message">
+                                                {{chat.message}}
+                                            </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="chat-users">
+                                <div class="users-list">
+
+                                    <div class="chat-user" data-ng-repeat="channelMember in channelMembers">
+                                        <span ng-if="channelMember.is_online" class="pull-right label label-primary">Online</span>
+                                        <img class="chat-avatar" src="{{channelMember.picture}}" alt="">
+                                        <div class="chat-user-name">
+                                            <a href="#">{{channelMember.nickname}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="chat-message-form">
+                                <div class="input-group">
+                                    <label for="upload" class="input-group-addon">
+                                        <span class="glyphicon glyphicon-upload dls-chat-upload-file" aria-hidden="true"></span>
+                                        <input type="file" id="upload" style="display: none" onchange="angular.element(this).scope().file_changed(this)">
+                                    </label>
+                                    <textarea class="form-control message-input" ng-model="$parent.newMessage" my-enter="sendNewMessage()" placeholder="Enter message text"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

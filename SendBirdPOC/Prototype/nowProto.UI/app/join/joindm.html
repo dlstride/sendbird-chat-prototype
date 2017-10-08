@@ -1,0 +1,44 @@
+﻿<div class="row dls-select-channel" >
+    Select users
+</div>
+
+<form class="form-horizontal dls-joindm-table">
+    <div class="form-group " >
+        <div class="col-md-8 dls-select-chatusers" >
+            <span class="nullable">
+                <table class="table table-striped table-condensed table-outlined table-bordered">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Nickname</th>
+                            <th>Email</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-ng-repeat="chatUser in chatUsers" class="dls-hover-color" ng-click="toggleSelected(chatUser)">
+                            <td>
+                                <i class="glyphicon glyphicon-user"></i>
+                            </td>
+                            <td>
+                                {{chatUser.name}}
+                            </td>
+                            <td>{{chatUser.email}}</td>
+                            <td>
+                                <i ng-class="{'glyphicon glyphicon-ok-sign dls-chatuser-selected' : chatUser.isSelected, 'glyphicon glyphicon-ok-circle' : !chatUser.isSelected}">
+
+                                </i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-6 col-sm-6">
+            <button ng-click="cancel()" class="btn btn-default">Cancel</button>
+            <button ng-click="createChannel()" class="btn btn-primary">Go</button>
+        </div>
+    </div>
+</form>

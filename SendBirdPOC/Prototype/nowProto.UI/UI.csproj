@@ -1,0 +1,1998 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{86CADB26-5817-46B6-88C7-76D5753722C3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nowProto1.UI</RootNamespace>
+    <AssemblyName>nowProto1.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptModuleKind />
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\HMTLHelperExtensions.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app\directives\enterpressed-directive.ts" />
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\patterns\congruent_pentagon.png" />
+    <Content Include="Content\patterns\header-profile-skin-1.png" />
+    <Content Include="Content\patterns\header-profile-skin-2.png" />
+    <Content Include="Content\patterns\header-profile-skin-3.png" />
+    <Content Include="Content\patterns\header-profile.png" />
+    <Content Include="Content\patterns\otis_redding.png" />
+    <Content Include="Content\patterns\shattered.png" />
+    <Content Include="Content\patterns\triangular.png" />
+    <Content Include="Content\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Images\a1.jpg" />
+    <Content Include="Images\a2.jpg" />
+    <Content Include="Images\a3.jpg" />
+    <Content Include="Images\a4.jpg" />
+    <Content Include="Images\a5.jpg" />
+    <Content Include="Images\a6.jpg" />
+    <Content Include="Images\a7.jpg" />
+    <Content Include="Images\a8.jpg" />
+    <Content Include="Images\angular_logo.png" />
+    <Content Include="Images\dashbard4_1.jpg" />
+    <Content Include="Images\dashbard4_2.jpg" />
+    <Content Include="Images\email_1.jpg" />
+    <Content Include="Images\email_2.jpg" />
+    <Content Include="Images\email_3.jpg" />
+    <Content Include="Images\flags\16\Abkhazia.png" />
+    <Content Include="Images\flags\16\Afghanistan.png" />
+    <Content Include="Images\flags\16\Aland.png" />
+    <Content Include="Images\flags\16\Albania.png" />
+    <Content Include="Images\flags\16\Algeria.png" />
+    <Content Include="Images\flags\16\American-Samoa.png" />
+    <Content Include="Images\flags\16\Andorra.png" />
+    <Content Include="Images\flags\16\Angola.png" />
+    <Content Include="Images\flags\16\Anguilla.png" />
+    <Content Include="Images\flags\16\Antarctica.png" />
+    <Content Include="Images\flags\16\Antigua-and-Barbuda.png" />
+    <Content Include="Images\flags\16\Argentina.png" />
+    <Content Include="Images\flags\16\Armenia.png" />
+    <Content Include="Images\flags\16\Aruba.png" />
+    <Content Include="Images\flags\16\Australia.png" />
+    <Content Include="Images\flags\16\Austria.png" />
+    <Content Include="Images\flags\16\Azerbaijan.png" />
+    <Content Include="Images\flags\16\Bahamas.png" />
+    <Content Include="Images\flags\16\Bahrain.png" />
+    <Content Include="Images\flags\16\Bangladesh.png" />
+    <Content Include="Images\flags\16\Barbados.png" />
+    <Content Include="Images\flags\16\Basque-Country.png" />
+    <Content Include="Images\flags\16\Belarus.png" />
+    <Content Include="Images\flags\16\Belgium.png" />
+    <Content Include="Images\flags\16\Belize.png" />
+    <Content Include="Images\flags\16\Benin.png" />
+    <Content Include="Images\flags\16\Bermuda.png" />
+    <Content Include="Images\flags\16\Bhutan.png" />
+    <Content Include="Images\flags\16\Bolivia.png" />
+    <Content Include="Images\flags\16\Bosnia-and-Herzegovina.png" />
+    <Content Include="Images\flags\16\Botswana.png" />
+    <Content Include="Images\flags\16\Brazil.png" />
+    <Content Include="Images\flags\16\British-Antarctic-Territory.png" />
+    <Content Include="Images\flags\16\British-Virgin-Islands.png" />
+    <Content Include="Images\flags\16\Brunei.png" />
+    <Content Include="Images\flags\16\Bulgaria.png" />
+    <Content Include="Images\flags\16\Burkina-Faso.png" />
+    <Content Include="Images\flags\16\Burundi.png" />
+    <Content Include="Images\flags\16\Cambodia.png" />
+    <Content Include="Images\flags\16\Cameroon.png" />
+    <Content Include="Images\flags\16\Canada.png" />
+    <Content Include="Images\flags\16\Canary-Islands.png" />
+    <Content Include="Images\flags\16\Cape-Verde.png" />
+    <Content Include="Images\flags\16\Cayman-Islands.png" />
+    <Content Include="Images\flags\16\Central-African-Republic.png" />
+    <Content Include="Images\flags\16\Chad.png" />
+    <Content Include="Images\flags\16\Chile.png" />
+    <Content Include="Images\flags\16\China.png" />
+    <Content Include="Images\flags\16\Christmas-Island.png" />
+    <Content Include="Images\flags\16\Cocos-Keeling-Islands.png" />
+    <Content Include="Images\flags\16\Colombia.png" />
+    <Content Include="Images\flags\16\Commonwealth.png" />
+    <Content Include="Images\flags\16\Comoros.png" />
+    <Content Include="Images\flags\16\Cook-Islands.png" />
+    <Content Include="Images\flags\16\Costa-Rica.png" />
+    <Content Include="Images\flags\16\Cote-dIvoire.png" />
+    <Content Include="Images\flags\16\Croatia.png" />
+    <Content Include="Images\flags\16\Cuba.png" />
+    <Content Include="Images\flags\16\Curacao.png" />
+    <Content Include="Images\flags\16\Cyprus.png" />
+    <Content Include="Images\flags\16\Czech-Republic.png" />
+    <Content Include="Images\flags\16\Democratic-Republic-of-the-Congo.png" />
+    <Content Include="Images\flags\16\Denmark.png" />
+    <Content Include="Images\flags\16\Djibouti.png" />
+    <Content Include="Images\flags\16\Dominica.png" />
+    <Content Include="Images\flags\16\Dominican-Republic.png" />
+    <Content Include="Images\flags\16\East-Timor.png" />
+    <Content Include="Images\flags\16\Ecuador.png" />
+    <Content Include="Images\flags\16\Egypt.png" />
+    <Content Include="Images\flags\16\El-Salvador.png" />
+    <Content Include="Images\flags\16\England.png" />
+    <Content Include="Images\flags\16\Equatorial-Guinea.png" />
+    <Content Include="Images\flags\16\Eritrea.png" />
+    <Content Include="Images\flags\16\Estonia.png" />
+    <Content Include="Images\flags\16\Ethiopia.png" />
+    <Content Include="Images\flags\16\European-Union.png" />
+    <Content Include="Images\flags\16\Falkland-Islands.png" />
+    <Content Include="Images\flags\16\Faroes.png" />
+    <Content Include="Images\flags\16\Fiji.png" />
+    <Content Include="Images\flags\16\Finland.png" />
+    <Content Include="Images\flags\16\France.png" />
+    <Content Include="Images\flags\16\French-Polynesia.png" />
+    <Content Include="Images\flags\16\French-Southern-Territories.png" />
+    <Content Include="Images\flags\16\Gabon.png" />
+    <Content Include="Images\flags\16\Gambia.png" />
+    <Content Include="Images\flags\16\Georgia.png" />
+    <Content Include="Images\flags\16\Germany.png" />
+    <Content Include="Images\flags\16\Ghana.png" />
+    <Content Include="Images\flags\16\Gibraltar.png" />
+    <Content Include="Images\flags\16\GoSquared.png" />
+    <Content Include="Images\flags\16\Greece.png" />
+    <Content Include="Images\flags\16\Greenland.png" />
+    <Content Include="Images\flags\16\Grenada.png" />
+    <Content Include="Images\flags\16\Guam.png" />
+    <Content Include="Images\flags\16\Guatemala.png" />
+    <Content Include="Images\flags\16\Guernsey.png" />
+    <Content Include="Images\flags\16\Guinea-Bissau.png" />
+    <Content Include="Images\flags\16\Guinea.png" />
+    <Content Include="Images\flags\16\Guyana.png" />
+    <Content Include="Images\flags\16\Haiti.png" />
+    <Content Include="Images\flags\16\Honduras.png" />
+    <Content Include="Images\flags\16\Hong-Kong.png" />
+    <Content Include="Images\flags\16\Hungary.png" />
+    <Content Include="Images\flags\16\Iceland.png" />
+    <Content Include="Images\flags\16\India.png" />
+    <Content Include="Images\flags\16\Indonesia.png" />
+    <Content Include="Images\flags\16\Iran.png" />
+    <Content Include="Images\flags\16\Iraq.png" />
+    <Content Include="Images\flags\16\Ireland.png" />
+    <Content Include="Images\flags\16\Isle-of-Man.png" />
+    <Content Include="Images\flags\16\Israel.png" />
+    <Content Include="Images\flags\16\Italy.png" />
+    <Content Include="Images\flags\16\Jamaica.png" />
+    <Content Include="Images\flags\16\Japan.png" />
+    <Content Include="Images\flags\16\Jersey.png" />
+    <Content Include="Images\flags\16\Jordan.png" />
+    <Content Include="Images\flags\16\Kazakhstan.png" />
+    <Content Include="Images\flags\16\Kenya.png" />
+    <Content Include="Images\flags\16\Kiribati.png" />
+    <Content Include="Images\flags\16\Kosovo.png" />
+    <Content Include="Images\flags\16\Kuwait.png" />
+    <Content Include="Images\flags\16\Kyrgyzstan.png" />
+    <Content Include="Images\flags\16\Laos.png" />
+    <Content Include="Images\flags\16\Latvia.png" />
+    <Content Include="Images\flags\16\Lebanon.png" />
+    <Content Include="Images\flags\16\Lesotho.png" />
+    <Content Include="Images\flags\16\Liberia.png" />
+    <Content Include="Images\flags\16\Libya.png" />
+    <Content Include="Images\flags\16\Liechtenstein.png" />
+    <Content Include="Images\flags\16\Lithuania.png" />
+    <Content Include="Images\flags\16\Luxembourg.png" />
+    <Content Include="Images\flags\16\Macau.png" />
+    <Content Include="Images\flags\16\Macedonia.png" />
+    <Content Include="Images\flags\16\Madagascar.png" />
+    <Content Include="Images\flags\16\Malawi.png" />
+    <Content Include="Images\flags\16\Malaysia.png" />
+    <Content Include="Images\flags\16\Maldives.png" />
+    <Content Include="Images\flags\16\Mali.png" />
+    <Content Include="Images\flags\16\Malta.png" />
+    <Content Include="Images\flags\16\Mars.png" />
+    <Content Include="Images\flags\16\Marshall-Islands.png" />
+    <Content Include="Images\flags\16\Martinique.png" />
+    <Content Include="Images\flags\16\Mauritania.png" />
+    <Content Include="Images\flags\16\Mauritius.png" />
+    <Content Include="Images\flags\16\Mayotte.png" />
+    <Content Include="Images\flags\16\Mexico.png" />
+    <Content Include="Images\flags\16\Micronesia.png" />
+    <Content Include="Images\flags\16\Moldova.png" />
+    <Content Include="Images\flags\16\Monaco.png" />
+    <Content Include="Images\flags\16\Mongolia.png" />
+    <Content Include="Images\flags\16\Montenegro.png" />
+    <Content Include="Images\flags\16\Montserrat.png" />
+    <Content Include="Images\flags\16\Morocco.png" />
+    <Content Include="Images\flags\16\Mozambique.png" />
+    <Content Include="Images\flags\16\Myanmar.png" />
+    <Content Include="Images\flags\16\Nagorno-Karabakh.png" />
+    <Content Include="Images\flags\16\Namibia.png" />
+    <Content Include="Images\flags\16\NATO.png" />
+    <Content Include="Images\flags\16\Nauru.png" />
+    <Content Include="Images\flags\16\Nepal.png" />
+    <Content Include="Images\flags\16\Netherlands-Antilles.png" />
+    <Content Include="Images\flags\16\Netherlands.png" />
+    <Content Include="Images\flags\16\New-Caledonia.png" />
+    <Content Include="Images\flags\16\New-Zealand.png" />
+    <Content Include="Images\flags\16\Nicaragua.png" />
+    <Content Include="Images\flags\16\Niger.png" />
+    <Content Include="Images\flags\16\Nigeria.png" />
+    <Content Include="Images\flags\16\Niue.png" />
+    <Content Include="Images\flags\16\Norfolk-Island.png" />
+    <Content Include="Images\flags\16\North-Korea.png" />
+    <Content Include="Images\flags\16\Northern-Cyprus.png" />
+    <Content Include="Images\flags\16\Northern-Mariana-Islands.png" />
+    <Content Include="Images\flags\16\Norway.png" />
+    <Content Include="Images\flags\16\Olympics.png" />
+    <Content Include="Images\flags\16\Oman.png" />
+    <Content Include="Images\flags\16\Pakistan.png" />
+    <Content Include="Images\flags\16\Palau.png" />
+    <Content Include="Images\flags\16\Palestine.png" />
+    <Content Include="Images\flags\16\Panama.png" />
+    <Content Include="Images\flags\16\Papua-New-Guinea.png" />
+    <Content Include="Images\flags\16\Paraguay.png" />
+    <Content Include="Images\flags\16\Peru.png" />
+    <Content Include="Images\flags\16\Philippines.png" />
+    <Content Include="Images\flags\16\Pitcairn-Islands.png" />
+    <Content Include="Images\flags\16\Poland.png" />
+    <Content Include="Images\flags\16\Portugal.png" />
+    <Content Include="Images\flags\16\Puerto-Rico.png" />
+    <Content Include="Images\flags\16\Qatar.png" />
+    <Content Include="Images\flags\16\Red-Cross.png" />
+    <Content Include="Images\flags\16\Republic-of-the-Congo.png" />
+    <Content Include="Images\flags\16\Romania.png" />
+    <Content Include="Images\flags\16\Russia.png" />
+    <Content Include="Images\flags\16\Rwanda.png" />
+    <Content Include="Images\flags\16\Saint-Barthelemy.png" />
+    <Content Include="Images\flags\16\Saint-Helena.png" />
+    <Content Include="Images\flags\16\Saint-Kitts-and-Nevis.png" />
+    <Content Include="Images\flags\16\Saint-Lucia.png" />
+    <Content Include="Images\flags\16\Saint-Martin.png" />
+    <Content Include="Images\flags\16\Saint-Vincent-and-the-Grenadines.png" />
+    <Content Include="Images\flags\16\Samoa.png" />
+    <Content Include="Images\flags\16\San-Marino.png" />
+    <Content Include="Images\flags\16\Sao-Tome-and-Principe.png" />
+    <Content Include="Images\flags\16\Saudi-Arabia.png" />
+    <Content Include="Images\flags\16\Scotland.png" />
+    <Content Include="Images\flags\16\Senegal.png" />
+    <Content Include="Images\flags\16\Serbia.png" />
+    <Content Include="Images\flags\16\Seychelles.png" />
+    <Content Include="Images\flags\16\Sierra-Leone.png" />
+    <Content Include="Images\flags\16\Singapore.png" />
+    <Content Include="Images\flags\16\Slovakia.png" />
+    <Content Include="Images\flags\16\Slovenia.png" />
+    <Content Include="Images\flags\16\Solomon-Islands.png" />
+    <Content Include="Images\flags\16\Somalia.png" />
+    <Content Include="Images\flags\16\Somaliland.png" />
+    <Content Include="Images\flags\16\South-Africa.png" />
+    <Content Include="Images\flags\16\South-Georgia-and-the-South-Sandwich-Islands.png" />
+    <Content Include="Images\flags\16\South-Korea.png" />
+    <Content Include="Images\flags\16\South-Ossetia.png" />
+    <Content Include="Images\flags\16\South-Sudan.png" />
+    <Content Include="Images\flags\16\Spain.png" />
+    <Content Include="Images\flags\16\Sri-Lanka.png" />
+    <Content Include="Images\flags\16\Sudan.png" />
+    <Content Include="Images\flags\16\Suriname.png" />
+    <Content Include="Images\flags\16\Swaziland.png" />
+    <Content Include="Images\flags\16\Sweden.png" />
+    <Content Include="Images\flags\16\Switzerland.png" />
+    <Content Include="Images\flags\16\Syria.png" />
+    <Content Include="Images\flags\16\Taiwan.png" />
+    <Content Include="Images\flags\16\Tajikistan.png" />
+    <Content Include="Images\flags\16\Tanzania.png" />
+    <Content Include="Images\flags\16\Thailand.png" />
+    <Content Include="Images\flags\16\Togo.png" />
+    <Content Include="Images\flags\16\Tokelau.png" />
+    <Content Include="Images\flags\16\Tonga.png" />
+    <Content Include="Images\flags\16\Trinidad-and-Tobago.png" />
+    <Content Include="Images\flags\16\Tunisia.png" />
+    <Content Include="Images\flags\16\Turkey.png" />
+    <Content Include="Images\flags\16\Turkmenistan.png" />
+    <Content Include="Images\flags\16\Turks-and-Caicos-Islands.png" />
+    <Content Include="Images\flags\16\Tuvalu.png" />
+    <Content Include="Images\flags\16\Uganda.png" />
+    <Content Include="Images\flags\16\Ukraine.png" />
+    <Content Include="Images\flags\16\United-Arab-Emirates.png" />
+    <Content Include="Images\flags\16\United-Kingdom.png" />
+    <Content Include="Images\flags\16\United-Nations.png" />
+    <Content Include="Images\flags\16\United-States.png" />
+    <Content Include="Images\flags\16\Unknown.png" />
+    <Content Include="Images\flags\16\Uruguay.png" />
+    <Content Include="Images\flags\16\US-Virgin-Islands.png" />
+    <Content Include="Images\flags\16\Uzbekistan.png" />
+    <Content Include="Images\flags\16\Vanuatu.png" />
+    <Content Include="Images\flags\16\Vatican-City.png" />
+    <Content Include="Images\flags\16\Venezuela.png" />
+    <Content Include="Images\flags\16\Vietnam.png" />
+    <Content Include="Images\flags\16\Wales.png" />
+    <Content Include="Images\flags\16\Wallis-And-Futuna.png" />
+    <Content Include="Images\flags\16\Western-Sahara.png" />
+    <Content Include="Images\flags\16\Yemen.png" />
+    <Content Include="Images\flags\16\Zambia.png" />
+    <Content Include="Images\flags\16\Zimbabwe.png" />
+    <Content Include="Images\flags\32\Abkhazia.png" />
+    <Content Include="Images\flags\32\Afghanistan.png" />
+    <Content Include="Images\flags\32\Aland.png" />
+    <Content Include="Images\flags\32\Albania.png" />
+    <Content Include="Images\flags\32\Algeria.png" />
+    <Content Include="Images\flags\32\American-Samoa.png" />
+    <Content Include="Images\flags\32\Andorra.png" />
+    <Content Include="Images\flags\32\Angola.png" />
+    <Content Include="Images\flags\32\Anguilla.png" />
+    <Content Include="Images\flags\32\Antarctica.png" />
+    <Content Include="Images\flags\32\Antigua-and-Barbuda.png" />
+    <Content Include="Images\flags\32\Argentina.png" />
+    <Content Include="Images\flags\32\Armenia.png" />
+    <Content Include="Images\flags\32\Aruba.png" />
+    <Content Include="Images\flags\32\Australia.png" />
+    <Content Include="Images\flags\32\Austria.png" />
+    <Content Include="Images\flags\32\Azerbaijan.png" />
+    <Content Include="Images\flags\32\Bahamas.png" />
+    <Content Include="Images\flags\32\Bahrain.png" />
+    <Content Include="Images\flags\32\Bangladesh.png" />
+    <Content Include="Images\flags\32\Barbados.png" />
+    <Content Include="Images\flags\32\Basque-Country.png" />
+    <Content Include="Images\flags\32\Belarus.png" />
+    <Content Include="Images\flags\32\Belgium.png" />
+    <Content Include="Images\flags\32\Belize.png" />
+    <Content Include="Images\flags\32\Benin.png" />
+    <Content Include="Images\flags\32\Bermuda.png" />
+    <Content Include="Images\flags\32\Bhutan.png" />
+    <Content Include="Images\flags\32\Bolivia.png" />
+    <Content Include="Images\flags\32\Bosnia-and-Herzegovina.png" />
+    <Content Include="Images\flags\32\Botswana.png" />
+    <Content Include="Images\flags\32\Brazil.png" />
+    <Content Include="Images\flags\32\British-Antarctic-Territory.png" />
+    <Content Include="Images\flags\32\British-Virgin-Islands.png" />
+    <Content Include="Images\flags\32\Brunei.png" />
+    <Content Include="Images\flags\32\Bulgaria.png" />
+    <Content Include="Images\flags\32\Burkina-Faso.png" />
+    <Content Include="Images\flags\32\Burundi.png" />
+    <Content Include="Images\flags\32\Cambodia.png" />
+    <Content Include="Images\flags\32\Cameroon.png" />
+    <Content Include="Images\flags\32\Canada.png" />
+    <Content Include="Images\flags\32\Canary-Islands.png" />
+    <Content Include="Images\flags\32\Cape-Verde.png" />
+    <Content Include="Images\flags\32\Cayman-Islands.png" />
+    <Content Include="Images\flags\32\Central-African-Republic.png" />
+    <Content Include="Images\flags\32\Chad.png" />
+    <Content Include="Images\flags\32\Chile.png" />
+    <Content Include="Images\flags\32\China.png" />
+    <Content Include="Images\flags\32\Christmas-Island.png" />
+    <Content Include="Images\flags\32\Cocos-Keeling-Islands.png" />
+    <Content Include="Images\flags\32\Colombia.png" />
+    <Content Include="Images\flags\32\Commonwealth.png" />
+    <Content Include="Images\flags\32\Comoros.png" />
+    <Content Include="Images\flags\32\Cook-Islands.png" />
+    <Content Include="Images\flags\32\Costa-Rica.png" />
+    <Content Include="Images\flags\32\Cote-dIvoire.png" />
+    <Content Include="Images\flags\32\Croatia.png" />
+    <Content Include="Images\flags\32\Cuba.png" />
+    <Content Include="Images\flags\32\Curacao.png" />
+    <Content Include="Images\flags\32\Cyprus.png" />
+    <Content Include="Images\flags\32\Czech-Republic.png" />
+    <Content Include="Images\flags\32\Democratic-Republic-of-the-Congo.png" />
+    <Content Include="Images\flags\32\Denmark.png" />
+    <Content Include="Images\flags\32\Djibouti.png" />
+    <Content Include="Images\flags\32\Dominica.png" />
+    <Content Include="Images\flags\32\Dominican-Republic.png" />
+    <Content Include="Images\flags\32\East-Timor.png" />
+    <Content Include="Images\flags\32\Ecuador.png" />
+    <Content Include="Images\flags\32\Egypt.png" />
+    <Content Include="Images\flags\32\El-Salvador.png" />
+    <Content Include="Images\flags\32\England.png" />
+    <Content Include="Images\flags\32\Equatorial-Guinea.png" />
+    <Content Include="Images\flags\32\Eritrea.png" />
+    <Content Include="Images\flags\32\Estonia.png" />
+    <Content Include="Images\flags\32\Ethiopia.png" />
+    <Content Include="Images\flags\32\European-Union.png" />
+    <Content Include="Images\flags\32\Falkland-Islands.png" />
+    <Content Include="Images\flags\32\Faroes.png" />
+    <Content Include="Images\flags\32\Fiji.png" />
+    <Content Include="Images\flags\32\Finland.png" />
+    <Content Include="Images\flags\32\France.png" />
+    <Content Include="Images\flags\32\French-Polynesia.png" />
+    <Content Include="Images\flags\32\French-Southern-Territories.png" />
+    <Content Include="Images\flags\32\Gabon.png" />
+    <Content Include="Images\flags\32\Gambia.png" />
+    <Content Include="Images\flags\32\Georgia.png" />
+    <Content Include="Images\flags\32\Germany.png" />
+    <Content Include="Images\flags\32\Ghana.png" />
+    <Content Include="Images\flags\32\Gibraltar.png" />
+    <Content Include="Images\flags\32\GoSquared.png" />
+    <Content Include="Images\flags\32\Greece.png" />
+    <Content Include="Images\flags\32\Greenland.png" />
+    <Content Include="Images\flags\32\Grenada.png" />
+    <Content Include="Images\flags\32\Guam.png" />
+    <Content Include="Images\flags\32\Guatemala.png" />
+    <Content Include="Images\flags\32\Guernsey.png" />
+    <Content Include="Images\flags\32\Guinea-Bissau.png" />
+    <Content Include="Images\flags\32\Guinea.png" />
+    <Content Include="Images\flags\32\Guyana.png" />
+    <Content Include="Images\flags\32\Haiti.png" />
+    <Content Include="Images\flags\32\Honduras.png" />
+    <Content Include="Images\flags\32\Hong-Kong.png" />
+    <Content Include="Images\flags\32\Hungary.png" />
+    <Content Include="Images\flags\32\Iceland.png" />
+    <Content Include="Images\flags\32\India.png" />
+    <Content Include="Images\flags\32\Indonesia.png" />
+    <Content Include="Images\flags\32\Iran.png" />
+    <Content Include="Images\flags\32\Iraq.png" />
+    <Content Include="Images\flags\32\Ireland.png" />
+    <Content Include="Images\flags\32\Isle-of-Man.png" />
+    <Content Include="Images\flags\32\Israel.png" />
+    <Content Include="Images\flags\32\Italy.png" />
+    <Content Include="Images\flags\32\Jamaica.png" />
+    <Content Include="Images\flags\32\Japan.png" />
+    <Content Include="Images\flags\32\Jersey.png" />
+    <Content Include="Images\flags\32\Jordan.png" />
+    <Content Include="Images\flags\32\Kazakhstan.png" />
+    <Content Include="Images\flags\32\Kenya.png" />
+    <Content Include="Images\flags\32\Kiribati.png" />
+    <Content Include="Images\flags\32\Kosovo.png" />
+    <Content Include="Images\flags\32\Kuwait.png" />
+    <Content Include="Images\flags\32\Kyrgyzstan.png" />
+    <Content Include="Images\flags\32\Laos.png" />
+    <Content Include="Images\flags\32\Latvia.png" />
+    <Content Include="Images\flags\32\Lebanon.png" />
+    <Content Include="Images\flags\32\Lesotho.png" />
+    <Content Include="Images\flags\32\Liberia.png" />
+    <Content Include="Images\flags\32\Libya.png" />
+    <Content Include="Images\flags\32\Liechtenstein.png" />
+    <Content Include="Images\flags\32\Lithuania.png" />
+    <Content Include="Images\flags\32\Luxembourg.png" />
+    <Content Include="Images\flags\32\Macau.png" />
+    <Content Include="Images\flags\32\Macedonia.png" />
+    <Content Include="Images\flags\32\Madagascar.png" />
+    <Content Include="Images\flags\32\Malawi.png" />
+    <Content Include="Images\flags\32\Malaysia.png" />
+    <Content Include="Images\flags\32\Maldives.png" />
+    <Content Include="Images\flags\32\Mali.png" />
+    <Content Include="Images\flags\32\Malta.png" />
+    <Content Include="Images\flags\32\Mars.png" />
+    <Content Include="Images\flags\32\Marshall-Islands.png" />
+    <Content Include="Images\flags\32\Martinique.png" />
+    <Content Include="Images\flags\32\Mauritania.png" />
+    <Content Include="Images\flags\32\Mauritius.png" />
+    <Content Include="Images\flags\32\Mayotte.png" />
+    <Content Include="Images\flags\32\Mexico.png" />
+    <Content Include="Images\flags\32\Micronesia.png" />
+    <Content Include="Images\flags\32\Moldova.png" />
+    <Content Include="Images\flags\32\Monaco.png" />
+    <Content Include="Images\flags\32\Mongolia.png" />
+    <Content Include="Images\flags\32\Montenegro.png" />
+    <Content Include="Images\flags\32\Montserrat.png" />
+    <Content Include="Images\flags\32\Morocco.png" />
+    <Content Include="Images\flags\32\Mozambique.png" />
+    <Content Include="Images\flags\32\Myanmar.png" />
+    <Content Include="Images\flags\32\Nagorno-Karabakh.png" />
+    <Content Include="Images\flags\32\Namibia.png" />
+    <Content Include="Images\flags\32\NATO.png" />
+    <Content Include="Images\flags\32\Nauru.png" />
+    <Content Include="Images\flags\32\Nepal.png" />
+    <Content Include="Images\flags\32\Netherlands-Antilles.png" />
+    <Content Include="Images\flags\32\Netherlands.png" />
+    <Content Include="Images\flags\32\New-Caledonia.png" />
+    <Content Include="Images\flags\32\New-Zealand.png" />
+    <Content Include="Images\flags\32\Nicaragua.png" />
+    <Content Include="Images\flags\32\Niger.png" />
+    <Content Include="Images\flags\32\Nigeria.png" />
+    <Content Include="Images\flags\32\Niue.png" />
+    <Content Include="Images\flags\32\Norfolk-Island.png" />
+    <Content Include="Images\flags\32\North-Korea.png" />
+    <Content Include="Images\flags\32\Northern-Cyprus.png" />
+    <Content Include="Images\flags\32\Northern-Mariana-Islands.png" />
+    <Content Include="Images\flags\32\Norway.png" />
+    <Content Include="Images\flags\32\Olympics.png" />
+    <Content Include="Images\flags\32\Oman.png" />
+    <Content Include="Images\flags\32\Pakistan.png" />
+    <Content Include="Images\flags\32\Palau.png" />
+    <Content Include="Images\flags\32\Palestine.png" />
+    <Content Include="Images\flags\32\Panama.png" />
+    <Content Include="Images\flags\32\Papua-New-Guinea.png" />
+    <Content Include="Images\flags\32\Paraguay.png" />
+    <Content Include="Images\flags\32\Peru.png" />
+    <Content Include="Images\flags\32\Philippines.png" />
+    <Content Include="Images\flags\32\Pitcairn-Islands.png" />
+    <Content Include="Images\flags\32\Poland.png" />
+    <Content Include="Images\flags\32\Portugal.png" />
+    <Content Include="Images\flags\32\Puerto-Rico.png" />
+    <Content Include="Images\flags\32\Qatar.png" />
+    <Content Include="Images\flags\32\Red-Cross.png" />
+    <Content Include="Images\flags\32\Republic-of-the-Congo.png" />
+    <Content Include="Images\flags\32\Romania.png" />
+    <Content Include="Images\flags\32\Russia.png" />
+    <Content Include="Images\flags\32\Rwanda.png" />
+    <Content Include="Images\flags\32\Saint-Barthelemy.png" />
+    <Content Include="Images\flags\32\Saint-Helena.png" />
+    <Content Include="Images\flags\32\Saint-Kitts-and-Nevis.png" />
+    <Content Include="Images\flags\32\Saint-Lucia.png" />
+    <Content Include="Images\flags\32\Saint-Martin.png" />
+    <Content Include="Images\flags\32\Saint-Vincent-and-the-Grenadines.png" />
+    <Content Include="Images\flags\32\Samoa.png" />
+    <Content Include="Images\flags\32\San-Marino.png" />
+    <Content Include="Images\flags\32\Sao-Tome-and-Principe.png" />
+    <Content Include="Images\flags\32\Saudi-Arabia.png" />
+    <Content Include="Images\flags\32\Scotland.png" />
+    <Content Include="Images\flags\32\Senegal.png" />
+    <Content Include="Images\flags\32\Serbia.png" />
+    <Content Include="Images\flags\32\Seychelles.png" />
+    <Content Include="Images\flags\32\Sierra-Leone.png" />
+    <Content Include="Images\flags\32\Singapore.png" />
+    <Content Include="Images\flags\32\Slovakia.png" />
+    <Content Include="Images\flags\32\Slovenia.png" />
+    <Content Include="Images\flags\32\Solomon-Islands.png" />
+    <Content Include="Images\flags\32\Somalia.png" />
+    <Content Include="Images\flags\32\Somaliland.png" />
+    <Content Include="Images\flags\32\South-Africa.png" />
+    <Content Include="Images\flags\32\South-Georgia-and-the-South-Sandwich-Islands.png" />
+    <Content Include="Images\flags\32\South-Korea.png" />
+    <Content Include="Images\flags\32\South-Ossetia.png" />
+    <Content Include="Images\flags\32\South-Sudan.png" />
+    <Content Include="Images\flags\32\Spain.png" />
+    <Content Include="Images\flags\32\Sri-Lanka.png" />
+    <Content Include="Images\flags\32\Sudan.png" />
+    <Content Include="Images\flags\32\Suriname.png" />
+    <Content Include="Images\flags\32\Swaziland.png" />
+    <Content Include="Images\flags\32\Sweden.png" />
+    <Content Include="Images\flags\32\Switzerland.png" />
+    <Content Include="Images\flags\32\Syria.png" />
+    <Content Include="Images\flags\32\Taiwan.png" />
+    <Content Include="Images\flags\32\Tajikistan.png" />
+    <Content Include="Images\flags\32\Tanzania.png" />
+    <Content Include="Images\flags\32\Thailand.png" />
+    <Content Include="Images\flags\32\Togo.png" />
+    <Content Include="Images\flags\32\Tokelau.png" />
+    <Content Include="Images\flags\32\Tonga.png" />
+    <Content Include="Images\flags\32\Trinidad-and-Tobago.png" />
+    <Content Include="Images\flags\32\Tunisia.png" />
+    <Content Include="Images\flags\32\Turkey.png" />
+    <Content Include="Images\flags\32\Turkmenistan.png" />
+    <Content Include="Images\flags\32\Turks-and-Caicos-Islands.png" />
+    <Content Include="Images\flags\32\Tuvalu.png" />
+    <Content Include="Images\flags\32\Uganda.png" />
+    <Content Include="Images\flags\32\Ukraine.png" />
+    <Content Include="Images\flags\32\United-Arab-Emirates.png" />
+    <Content Include="Images\flags\32\United-Kingdom.png" />
+    <Content Include="Images\flags\32\United-Nations.png" />
+    <Content Include="Images\flags\32\United-States.png" />
+    <Content Include="Images\flags\32\Unknown.png" />
+    <Content Include="Images\flags\32\Uruguay.png" />
+    <Content Include="Images\flags\32\US-Virgin-Islands.png" />
+    <Content Include="Images\flags\32\Uzbekistan.png" />
+    <Content Include="Images\flags\32\Vanuatu.png" />
+    <Content Include="Images\flags\32\Vatican-City.png" />
+    <Content Include="Images\flags\32\Venezuela.png" />
+    <Content Include="Images\flags\32\Vietnam.png" />
+    <Content Include="Images\flags\32\Wales.png" />
+    <Content Include="Images\flags\32\Wallis-And-Futuna.png" />
+    <Content Include="Images\flags\32\Western-Sahara.png" />
+    <Content Include="Images\flags\32\Yemen.png" />
+    <Content Include="Images\flags\32\Zambia.png" />
+    <Content Include="Images\flags\32\Zimbabwe.png" />
+    <Content Include="Images\flags\64\Abkhazia.png" />
+    <Content Include="Images\flags\64\Afghanistan.png" />
+    <Content Include="Images\flags\64\Aland.png" />
+    <Content Include="Images\flags\64\Albania.png" />
+    <Content Include="Images\flags\64\Algeria.png" />
+    <Content Include="Images\flags\64\American-Samoa.png" />
+    <Content Include="Images\flags\64\Andorra.png" />
+    <Content Include="Images\flags\64\Angola.png" />
+    <Content Include="Images\flags\64\Anguilla.png" />
+    <Content Include="Images\flags\64\Antarctica.png" />
+    <Content Include="Images\flags\64\Antigua-and-Barbuda.png" />
+    <Content Include="Images\flags\64\Argentina.png" />
+    <Content Include="Images\flags\64\Armenia.png" />
+    <Content Include="Images\flags\64\Aruba.png" />
+    <Content Include="Images\flags\64\Australia.png" />
+    <Content Include="Images\flags\64\Austria.png" />
+    <Content Include="Images\flags\64\Azerbaijan.png" />
+    <Content Include="Images\flags\64\Bahamas.png" />
+    <Content Include="Images\flags\64\Bahrain.png" />
+    <Content Include="Images\flags\64\Bangladesh.png" />
+    <Content Include="Images\flags\64\Barbados.png" />
+    <Content Include="Images\flags\64\Basque-Country.png" />
+    <Content Include="Images\flags\64\Belarus.png" />
+    <Content Include="Images\flags\64\Belgium.png" />
+    <Content Include="Images\flags\64\Belize.png" />
+    <Content Include="Images\flags\64\Benin.png" />
+    <Content Include="Images\flags\64\Bermuda.png" />
+    <Content Include="Images\flags\64\Bhutan.png" />
+    <Content Include="Images\flags\64\Bolivia.png" />
+    <Content Include="Images\flags\64\Bosnia-and-Herzegovina.png" />
+    <Content Include="Images\flags\64\Botswana.png" />
+    <Content Include="Images\flags\64\Brazil.png" />
+    <Content Include="Images\flags\64\British-Antarctic-Territory.png" />
+    <Content Include="Images\flags\64\British-Virgin-Islands.png" />
+    <Content Include="Images\flags\64\Brunei.png" />
+    <Content Include="Images\flags\64\Bulgaria.png" />
+    <Content Include="Images\flags\64\Burkina-Faso.png" />
+    <Content Include="Images\flags\64\Burundi.png" />
+    <Content Include="Images\flags\64\Cambodia.png" />
+    <Content Include="Images\flags\64\Cameroon.png" />
+    <Content Include="Images\flags\64\Canada.png" />
+    <Content Include="Images\flags\64\Canary-Islands.png" />
+    <Content Include="Images\flags\64\Cape-Verde.png" />
+    <Content Include="Images\flags\64\Cayman-Islands.png" />
+    <Content Include="Images\flags\64\Central-African-Republic.png" />
+    <Content Include="Images\flags\64\Chad.png" />
+    <Content Include="Images\flags\64\Chile.png" />
+    <Content Include="Images\flags\64\China.png" />
+    <Content Include="Images\flags\64\Christmas-Island.png" />
+    <Content Include="Images\flags\64\Cocos-Keeling-Islands.png" />
+    <Content Include="Images\flags\64\Colombia.png" />
+    <Content Include="Images\flags\64\Commonwealth.png" />
+    <Content Include="Images\flags\64\Comoros.png" />
+    <Content Include="Images\flags\64\Cook-Islands.png" />
+    <Content Include="Images\flags\64\Costa-Rica.png" />
+    <Content Include="Images\flags\64\Cote-dIvoire.png" />
+    <Content Include="Images\flags\64\Croatia.png" />
+    <Content Include="Images\flags\64\Cuba.png" />
+    <Content Include="Images\flags\64\Curacao.png" />
+    <Content Include="Images\flags\64\Cyprus.png" />
+    <Content Include="Images\flags\64\Czech-Republic.png" />
+    <Content Include="Images\flags\64\Democratic-Republic-of-the-Congo.png" />
+    <Content Include="Images\flags\64\Denmark.png" />
+    <Content Include="Images\flags\64\Djibouti.png" />
+    <Content Include="Images\flags\64\Dominica.png" />
+    <Content Include="Images\flags\64\Dominican-Republic.png" />
+    <Content Include="Images\flags\64\East-Timor.png" />
+    <Content Include="Images\flags\64\Ecuador.png" />
+    <Content Include="Images\flags\64\Egypt.png" />
+    <Content Include="Images\flags\64\El-Salvador.png" />
+    <Content Include="Images\flags\64\England.png" />
+    <Content Include="Images\flags\64\Equatorial-Guinea.png" />
+    <Content Include="Images\flags\64\Eritrea.png" />
+    <Content Include="Images\flags\64\Estonia.png" />
+    <Content Include="Images\flags\64\Ethiopia.png" />
+    <Content Include="Images\flags\64\European-Union.png" />
+    <Content Include="Images\flags\64\Falkland-Islands.png" />
+    <Content Include="Images\flags\64\Faroes.png" />
+    <Content Include="Images\flags\64\Fiji.png" />
+    <Content Include="Images\flags\64\Finland.png" />
+    <Content Include="Images\flags\64\France.png" />
+    <Content Include="Images\flags\64\French-Polynesia.png" />
+    <Content Include="Images\flags\64\French-Southern-Territories.png" />
+    <Content Include="Images\flags\64\Gabon.png" />
+    <Content Include="Images\flags\64\Gambia.png" />
+    <Content Include="Images\flags\64\Georgia.png" />
+    <Content Include="Images\flags\64\Germany.png" />
+    <Content Include="Images\flags\64\Ghana.png" />
+    <Content Include="Images\flags\64\Gibraltar.png" />
+    <Content Include="Images\flags\64\GoSquared.png" />
+    <Content Include="Images\flags\64\Greece.png" />
+    <Content Include="Images\flags\64\Greenland.png" />
+    <Content Include="Images\flags\64\Grenada.png" />
+    <Content Include="Images\flags\64\Guam.png" />
+    <Content Include="Images\flags\64\Guatemala.png" />
+    <Content Include="Images\flags\64\Guernsey.png" />
+    <Content Include="Images\flags\64\Guinea-Bissau.png" />
+    <Content Include="Images\flags\64\Guinea.png" />
+    <Content Include="Images\flags\64\Guyana.png" />
+    <Content Include="Images\flags\64\Haiti.png" />
+    <Content Include="Images\flags\64\Honduras.png" />
+    <Content Include="Images\flags\64\Hong-Kong.png" />
+    <Content Include="Images\flags\64\Hungary.png" />
+    <Content Include="Images\flags\64\Iceland.png" />
+    <Content Include="Images\flags\64\India.png" />
+    <Content Include="Images\flags\64\Indonesia.png" />
+    <Content Include="Images\flags\64\Iran.png" />
+    <Content Include="Images\flags\64\Iraq.png" />
+    <Content Include="Images\flags\64\Ireland.png" />
+    <Content Include="Images\flags\64\Isle-of-Man.png" />
+    <Content Include="Images\flags\64\Israel.png" />
+    <Content Include="Images\flags\64\Italy.png" />
+    <Content Include="Images\flags\64\Jamaica.png" />
+    <Content Include="Images\flags\64\Japan.png" />
+    <Content Include="Images\flags\64\Jersey.png" />
+    <Content Include="Images\flags\64\Jordan.png" />
+    <Content Include="Images\flags\64\Kazakhstan.png" />
+    <Content Include="Images\flags\64\Kenya.png" />
+    <Content Include="Images\flags\64\Kiribati.png" />
+    <Content Include="Images\flags\64\Kosovo.png" />
+    <Content Include="Images\flags\64\Kuwait.png" />
+    <Content Include="Images\flags\64\Kyrgyzstan.png" />
+    <Content Include="Images\flags\64\Laos.png" />
+    <Content Include="Images\flags\64\Latvia.png" />
+    <Content Include="Images\flags\64\Lebanon.png" />
+    <Content Include="Images\flags\64\Lesotho.png" />
+    <Content Include="Images\flags\64\Liberia.png" />
+    <Content Include="Images\flags\64\Libya.png" />
+    <Content Include="Images\flags\64\Liechtenstein.png" />
+    <Content Include="Images\flags\64\Lithuania.png" />
+    <Content Include="Images\flags\64\Luxembourg.png" />
+    <Content Include="Images\flags\64\Macau.png" />
+    <Content Include="Images\flags\64\Macedonia.png" />
+    <Content Include="Images\flags\64\Madagascar.png" />
+    <Content Include="Images\flags\64\Malawi.png" />
+    <Content Include="Images\flags\64\Malaysia.png" />
+    <Content Include="Images\flags\64\Maldives.png" />
+    <Content Include="Images\flags\64\Mali.png" />
+    <Content Include="Images\flags\64\Malta.png" />
+    <Content Include="Images\flags\64\Mars.png" />
+    <Content Include="Images\flags\64\Marshall-Islands.png" />
+    <Content Include="Images\flags\64\Martinique.png" />
+    <Content Include="Images\flags\64\Mauritania.png" />
+    <Content Include="Images\flags\64\Mauritius.png" />
+    <Content Include="Images\flags\64\Mayotte.png" />
+    <Content Include="Images\flags\64\Mexico.png" />
+    <Content Include="Images\flags\64\Micronesia.png" />
+    <Content Include="Images\flags\64\Moldova.png" />
+    <Content Include="Images\flags\64\Monaco.png" />
+    <Content Include="Images\flags\64\Mongolia.png" />
+    <Content Include="Images\flags\64\Montenegro.png" />
+    <Content Include="Images\flags\64\Montserrat.png" />
+    <Content Include="Images\flags\64\Morocco.png" />
+    <Content Include="Images\flags\64\Mozambique.png" />
+    <Content Include="Images\flags\64\Myanmar.png" />
+    <Content Include="Images\flags\64\Nagorno-Karabakh.png" />
+    <Content Include="Images\flags\64\Namibia.png" />
+    <Content Include="Images\flags\64\NATO.png" />
+    <Content Include="Images\flags\64\Nauru.png" />
+    <Content Include="Images\flags\64\Nepal.png" />
+    <Content Include="Images\flags\64\Netherlands-Antilles.png" />
+    <Content Include="Images\flags\64\Netherlands.png" />
+    <Content Include="Images\flags\64\New-Caledonia.png" />
+    <Content Include="Images\flags\64\New-Zealand.png" />
+    <Content Include="Images\flags\64\Nicaragua.png" />
+    <Content Include="Images\flags\64\Niger.png" />
+    <Content Include="Images\flags\64\Nigeria.png" />
+    <Content Include="Images\flags\64\Niue.png" />
+    <Content Include="Images\flags\64\Norfolk-Island.png" />
+    <Content Include="Images\flags\64\North-Korea.png" />
+    <Content Include="Images\flags\64\Northern-Cyprus.png" />
+    <Content Include="Images\flags\64\Northern-Mariana-Islands.png" />
+    <Content Include="Images\flags\64\Norway.png" />
+    <Content Include="Images\flags\64\Olympics.png" />
+    <Content Include="Images\flags\64\Oman.png" />
+    <Content Include="Images\flags\64\Pakistan.png" />
+    <Content Include="Images\flags\64\Palau.png" />
+    <Content Include="Images\flags\64\Palestine.png" />
+    <Content Include="Images\flags\64\Panama.png" />
+    <Content Include="Images\flags\64\Papua-New-Guinea.png" />
+    <Content Include="Images\flags\64\Paraguay.png" />
+    <Content Include="Images\flags\64\Peru.png" />
+    <Content Include="Images\flags\64\Philippines.png" />
+    <Content Include="Images\flags\64\Pitcairn-Islands.png" />
+    <Content Include="Images\flags\64\Poland.png" />
+    <Content Include="Images\flags\64\Portugal.png" />
+    <Content Include="Images\flags\64\Puerto-Rico.png" />
+    <Content Include="Images\flags\64\Qatar.png" />
+    <Content Include="Images\flags\64\Red-Cross.png" />
+    <Content Include="Images\flags\64\Republic-of-the-Congo.png" />
+    <Content Include="Images\flags\64\Romania.png" />
+    <Content Include="Images\flags\64\Russia.png" />
+    <Content Include="Images\flags\64\Rwanda.png" />
+    <Content Include="Images\flags\64\Saint-Barthelemy.png" />
+    <Content Include="Images\flags\64\Saint-Helena.png" />
+    <Content Include="Images\flags\64\Saint-Kitts-and-Nevis.png" />
+    <Content Include="Images\flags\64\Saint-Lucia.png" />
+    <Content Include="Images\flags\64\Saint-Martin.png" />
+    <Content Include="Images\flags\64\Saint-Vincent-and-the-Grenadines.png" />
+    <Content Include="Images\flags\64\Samoa.png" />
+    <Content Include="Images\flags\64\San-Marino.png" />
+    <Content Include="Images\flags\64\Sao-Tome-and-Principe.png" />
+    <Content Include="Images\flags\64\Saudi-Arabia.png" />
+    <Content Include="Images\flags\64\Scotland.png" />
+    <Content Include="Images\flags\64\Senegal.png" />
+    <Content Include="Images\flags\64\Serbia.png" />
+    <Content Include="Images\flags\64\Seychelles.png" />
+    <Content Include="Images\flags\64\Sierra-Leone.png" />
+    <Content Include="Images\flags\64\Singapore.png" />
+    <Content Include="Images\flags\64\Slovakia.png" />
+    <Content Include="Images\flags\64\Slovenia.png" />
+    <Content Include="Images\flags\64\Solomon-Islands.png" />
+    <Content Include="Images\flags\64\Somalia.png" />
+    <Content Include="Images\flags\64\Somaliland.png" />
+    <Content Include="Images\flags\64\South-Africa.png" />
+    <Content Include="Images\flags\64\South-Georgia-and-the-South-Sandwich-Islands.png" />
+    <Content Include="Images\flags\64\South-Korea.png" />
+    <Content Include="Images\flags\64\South-Ossetia.png" />
+    <Content Include="Images\flags\64\South-Sudan.png" />
+    <Content Include="Images\flags\64\Spain.png" />
+    <Content Include="Images\flags\64\Sri-Lanka.png" />
+    <Content Include="Images\flags\64\Sudan.png" />
+    <Content Include="Images\flags\64\Suriname.png" />
+    <Content Include="Images\flags\64\Swaziland.png" />
+    <Content Include="Images\flags\64\Sweden.png" />
+    <Content Include="Images\flags\64\Switzerland.png" />
+    <Content Include="Images\flags\64\Syria.png" />
+    <Content Include="Images\flags\64\Taiwan.png" />
+    <Content Include="Images\flags\64\Tajikistan.png" />
+    <Content Include="Images\flags\64\Tanzania.png" />
+    <Content Include="Images\flags\64\Thailand.png" />
+    <Content Include="Images\flags\64\Togo.png" />
+    <Content Include="Images\flags\64\Tokelau.png" />
+    <Content Include="Images\flags\64\Tonga.png" />
+    <Content Include="Images\flags\64\Trinidad-and-Tobago.png" />
+    <Content Include="Images\flags\64\Tunisia.png" />
+    <Content Include="Images\flags\64\Turkey.png" />
+    <Content Include="Images\flags\64\Turkmenistan.png" />
+    <Content Include="Images\flags\64\Turks-and-Caicos-Islands.png" />
+    <Content Include="Images\flags\64\Tuvalu.png" />
+    <Content Include="Images\flags\64\Uganda.png" />
+    <Content Include="Images\flags\64\Ukraine.png" />
+    <Content Include="Images\flags\64\United-Arab-Emirates.png" />
+    <Content Include="Images\flags\64\United-Kingdom.png" />
+    <Content Include="Images\flags\64\United-Nations.png" />
+    <Content Include="Images\flags\64\United-States.png" />
+    <Content Include="Images\flags\64\Unknown.png" />
+    <Content Include="Images\flags\64\Uruguay.png" />
+    <Content Include="Images\flags\64\US-Virgin-Islands.png" />
+    <Content Include="Images\flags\64\Uzbekistan.png" />
+    <Content Include="Images\flags\64\Vanuatu.png" />
+    <Content Include="Images\flags\64\Vatican-City.png" />
+    <Content Include="Images\flags\64\Venezuela.png" />
+    <Content Include="Images\flags\64\Vietnam.png" />
+    <Content Include="Images\flags\64\Wales.png" />
+    <Content Include="Images\flags\64\Wallis-And-Futuna.png" />
+    <Content Include="Images\flags\64\Western-Sahara.png" />
+    <Content Include="Images\flags\64\Yemen.png" />
+    <Content Include="Images\flags\64\Zambia.png" />
+    <Content Include="Images\flags\64\Zimbabwe.png" />
+    <Content Include="Images\full_height.jpg" />
+    <Content Include="Images\gallery\1.jpg" />
+    <Content Include="Images\gallery\10.jpg" />
+    <Content Include="Images\gallery\10s.jpg" />
+    <Content Include="Images\gallery\11.jpg" />
+    <Content Include="Images\gallery\11s.jpg" />
+    <Content Include="Images\gallery\12.jpg" />
+    <Content Include="Images\gallery\12s.jpg" />
+    <Content Include="Images\gallery\1s.jpg" />
+    <Content Include="Images\gallery\2.jpg" />
+    <Content Include="Images\gallery\2s.jpg" />
+    <Content Include="Images\gallery\3.jpg" />
+    <Content Include="Images\gallery\3s.jpg" />
+    <Content Include="Images\gallery\4.jpg" />
+    <Content Include="Images\gallery\4s.jpg" />
+    <Content Include="Images\gallery\5.jpg" />
+    <Content Include="Images\gallery\5s.jpg" />
+    <Content Include="Images\gallery\6.jpg" />
+    <Content Include="Images\gallery\6s.jpg" />
+    <Content Include="Images\gallery\7.jpg" />
+    <Content Include="Images\gallery\7s.jpg" />
+    <Content Include="Images\gallery\8.jpg" />
+    <Content Include="Images\gallery\8s.jpg" />
+    <Content Include="Images\gallery\9.jpg" />
+    <Content Include="Images\gallery\9s.jpg" />
+    <Content Include="Images\header.jpg" />
+    <Content Include="Images\landing\avatar1.jpg" />
+    <Content Include="Images\landing\avatar2.jpg" />
+    <Content Include="Images\landing\avatar3.jpg" />
+    <Content Include="Images\landing\avatar4.jpg" />
+    <Content Include="Images\landing\avatar5.jpg" />
+    <Content Include="Images\landing\avatar6.jpg" />
+    <Content Include="Images\landing\avatar7.jpg" />
+    <Content Include="Images\landing\avatar8.jpg" />
+    <Content Include="Images\landing\avatar9.jpg" />
+    <Content Include="Images\landing\dashboard.png" />
+    <Content Include="Images\landing\iphone.jpg" />
+    <Content Include="Images\landing\laptop.png" />
+    <Content Include="Images\landing\perspective.png" />
+    <Content Include="Images\off_canvas.jpg" />
+    <Content Include="Images\p1.jpg" />
+    <Content Include="Images\p2.jpg" />
+    <Content Include="Images\p3.jpg" />
+    <Content Include="Images\p4.jpg" />
+    <Content Include="Images\p5.jpg" />
+    <Content Include="Images\p6.jpg" />
+    <Content Include="Images\p7.jpg" />
+    <Content Include="Images\p8.jpg" />
+    <Content Include="Images\profile.jpg" />
+    <Content Include="Images\profile_big.jpg" />
+    <Content Include="Images\profile_small.jpg" />
+    <Content Include="Images\p_big1.jpg" />
+    <Content Include="Images\p_big2.jpg" />
+    <Content Include="Images\p_big3.jpg" />
+    <Content Include="Images\zender_logo.png" />
+    <Content Include="Scripts\angular-animate.js" />
+    <Content Include="Scripts\angular-animate.min.js" />
+    <Content Include="Scripts\angular-aria.js" />
+    <Content Include="Scripts\angular-aria.min.js" />
+    <Content Include="Scripts\angular-cookies.js" />
+    <Content Include="Scripts\angular-cookies.min.js" />
+    <Content Include="Scripts\angular-csp.css" />
+    <Content Include="Scripts\angular-loader.js" />
+    <Content Include="Scripts\angular-loader.min.js" />
+    <Content Include="Scripts\angular-message-format.js" />
+    <Content Include="Scripts\angular-message-format.min.js" />
+    <Content Include="Scripts\angular-messages.js" />
+    <Content Include="Scripts\angular-messages.min.js" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-parse-ext.js" />
+    <Content Include="Scripts\angular-parse-ext.min.js" />
+    <Content Include="Scripts\angular-resource.js" />
+    <Content Include="Scripts\angular-resource.min.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-sanitize.js" />
+    <Content Include="Scripts\angular-sanitize.min.js" />
+    <Content Include="Scripts\angular-scenario.js" />
+    <Content Include="Scripts\angular-touch.js" />
+    <Content Include="Scripts\angular-touch.min.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <TypeScriptCompile Include="app\app.ts" />
+    <Content Include="app\inspinia.js" />
+    <TypeScriptCompile Include="app\join\joindm.ts" />
+    <Content Include="app\join\joindm.html" />
+    <TypeScriptCompile Include="app\main\common.services.ts" />
+    <TypeScriptCompile Include="app\main\navigation.ts" />
+    <Content Include="app\login\sendbirdlogin.html" />
+    <TypeScriptCompile Include="app\login\sendbirdlogin.ts" />
+    <TypeScriptCompile Include="app\main\sendbirdservice.ts" />
+    <TypeScriptCompile Include="app\join\joinchannel.ts" />
+    <TypeScriptCompile Include="app\main\shareddata.ts" />
+    <Content Include="app\main\homeview.html" />
+    <TypeScriptCompile Include="app\main\homeview.ts" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="fonts\font-awesome\less\animated.less" />
+    <Content Include="fonts\font-awesome\less\bordered-pulled.less" />
+    <Content Include="fonts\font-awesome\less\core.less" />
+    <Content Include="fonts\font-awesome\less\fixed-width.less" />
+    <Content Include="fonts\font-awesome\less\font-awesome.less" />
+    <Content Include="fonts\font-awesome\less\icons.less" />
+    <Content Include="fonts\font-awesome\less\larger.less" />
+    <Content Include="fonts\font-awesome\less\list.less" />
+    <Content Include="fonts\font-awesome\less\mixins.less" />
+    <Content Include="fonts\font-awesome\less\path.less" />
+    <Content Include="fonts\font-awesome\less\rotated-flipped.less" />
+    <Content Include="fonts\font-awesome\less\stacked.less" />
+    <Content Include="fonts\font-awesome\less\variables.less" />
+    <Content Include="fonts\font-awesome\scss\font-awesome.scss" />
+    <Content Include="fonts\font-awesome\scss\_animated.scss" />
+    <Content Include="fonts\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="fonts\font-awesome\scss\_core.scss" />
+    <Content Include="fonts\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="fonts\font-awesome\scss\_icons.scss" />
+    <Content Include="fonts\font-awesome\scss\_larger.scss" />
+    <Content Include="fonts\font-awesome\scss\_list.scss" />
+    <Content Include="fonts\font-awesome\scss\_mixins.scss" />
+    <Content Include="fonts\font-awesome\scss\_path.scss" />
+    <Content Include="fonts\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="fonts\font-awesome\scss\_stacked.scss" />
+    <Content Include="fonts\font-awesome\scss\_variables.scss" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\HostDemo.pubxml" />
+    <Content Include="Scripts\errors.json" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-touch.min.js.map" />
+    <Content Include="Scripts\angular-sanitize.min.js.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\angular-resource.min.js.map" />
+    <Content Include="Scripts\angular-parse-ext.min.js.map" />
+    <Content Include="Scripts\angular-messages.min.js.map" />
+    <Content Include="Scripts\angular-message-format.min.js.map" />
+    <Content Include="Scripts\angular-loader.min.js.map" />
+    <Content Include="Scripts\angular-cookies.min.js.map" />
+    <Content Include="Scripts\angular-aria.min.js.map" />
+    <Content Include="Scripts\angular-animate.min.js.map" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
+    <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
+    <Content Include="Scripts\i18n\angular-locale_aa-et.js" />
+    <Content Include="Scripts\i18n\angular-locale_aa.js" />
+    <Content Include="Scripts\i18n\angular-locale_af-na.js" />
+    <Content Include="Scripts\i18n\angular-locale_af-za.js" />
+    <Content Include="Scripts\i18n\angular-locale_af.js" />
+    <Content Include="Scripts\i18n\angular-locale_agq-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_agq.js" />
+    <Content Include="Scripts\i18n\angular-locale_ak-gh.js" />
+    <Content Include="Scripts\i18n\angular-locale_ak.js" />
+    <Content Include="Scripts\i18n\angular-locale_am-et.js" />
+    <Content Include="Scripts\i18n\angular-locale_am.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-001.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-ae.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-bh.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-dj.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-dz.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-eg.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-eh.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-er.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-il.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-iq.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-jo.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-km.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-kw.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-lb.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-ly.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-ma.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-mr.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-om.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-ps.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-qa.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-sa.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-sd.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-so.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-ss.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-sy.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-td.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-tn.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar-ye.js" />
+    <Content Include="Scripts\i18n\angular-locale_ar.js" />
+    <Content Include="Scripts\i18n\angular-locale_as-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_as.js" />
+    <Content Include="Scripts\i18n\angular-locale_asa-tz.js" />
+    <Content Include="Scripts\i18n\angular-locale_asa.js" />
+    <Content Include="Scripts\i18n\angular-locale_ast-es.js" />
+    <Content Include="Scripts\i18n\angular-locale_ast.js" />
+    <Content Include="Scripts\i18n\angular-locale_az-cyrl-az.js" />
+    <Content Include="Scripts\i18n\angular-locale_az-cyrl.js" />
+    <Content Include="Scripts\i18n\angular-locale_az-latn-az.js" />
+    <Content Include="Scripts\i18n\angular-locale_az-latn.js" />
+    <Content Include="Scripts\i18n\angular-locale_az.js" />
+    <Content Include="Scripts\i18n\angular-locale_bas-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_bas.js" />
+    <Content Include="Scripts\i18n\angular-locale_be-by.js" />
+    <Content Include="Scripts\i18n\angular-locale_be.js" />
+    <Content Include="Scripts\i18n\angular-locale_bem-zm.js" />
+    <Content Include="Scripts\i18n\angular-locale_bem.js" />
+    <Content Include="Scripts\i18n\angular-locale_bez-tz.js" />
+    <Content Include="Scripts\i18n\angular-locale_bez.js" />
+    <Content Include="Scripts\i18n\angular-locale_bg-bg.js" />
+    <Content Include="Scripts\i18n\angular-locale_bg.js" />
+    <Content Include="Scripts\i18n\angular-locale_bm-latn-ml.js" />
+    <Content Include="Scripts\i18n\angular-locale_bm-latn.js" />
+    <Content Include="Scripts\i18n\angular-locale_bm-ml.js" />
+    <Content Include="Scripts\i18n\angular-locale_bm.js" />
+    <Content Include="Scripts\i18n\angular-locale_bn-bd.js" />
+    <Content Include="Scripts\i18n\angular-locale_bn-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_bn.js" />
+    <Content Include="Scripts\i18n\angular-locale_bo-cn.js" />
+    <Content Include="Scripts\i18n\angular-locale_bo-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_bo.js" />
+    <Content Include="Scripts\i18n\angular-locale_br-fr.js" />
+    <Content Include="Scripts\i18n\angular-locale_br.js" />
+    <Content Include="Scripts\i18n\angular-locale_brx-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_brx.js" />
+    <Content Include="Scripts\i18n\angular-locale_bs-cyrl-ba.js" />
+    <Content Include="Scripts\i18n\angular-locale_bs-cyrl.js" />
+    <Content Include="Scripts\i18n\angular-locale_bs-latn-ba.js" />
+    <Content Include="Scripts\i18n\angular-locale_bs-latn.js" />
+    <Content Include="Scripts\i18n\angular-locale_bs.js" />
+    <Content Include="Scripts\i18n\angular-locale_byn-er.js" />
+    <Content Include="Scripts\i18n\angular-locale_byn.js" />
+    <Content Include="Scripts\i18n\angular-locale_ca-ad.js" />
+    <Content Include="Scripts\i18n\angular-locale_ca-es-valencia.js" />
+    <Content Include="Scripts\i18n\angular-locale_ca-es.js" />
+    <Content Include="Scripts\i18n\angular-locale_ca-fr.js" />
+    <Content Include="Scripts\i18n\angular-locale_ca-it.js" />
+    <Content Include="Scripts\i18n\angular-locale_ca.js" />
+    <Content Include="Scripts\i18n\angular-locale_cgg-ug.js" />
+    <Content Include="Scripts\i18n\angular-locale_cgg.js" />
+    <Content Include="Scripts\i18n\angular-locale_chr-us.js" />
+    <Content Include="Scripts\i18n\angular-locale_chr.js" />
+    <Content Include="Scripts\i18n\angular-locale_ckb-arab-iq.js" />
+    <Content Include="Scripts\i18n\angular-locale_ckb-arab-ir.js" />
+    <Content Include="Scripts\i18n\angular-locale_ckb-arab.js" />
+    <Content Include="Scripts\i18n\angular-locale_ckb-iq.js" />
+    <Content Include="Scripts\i18n\angular-locale_ckb-ir.js" />
+    <Content Include="Scripts\i18n\angular-locale_ckb-latn-iq.js" />
+    <Content Include="Scripts\i18n\angular-locale_ckb-latn.js" />
+    <Content Include="Scripts\i18n\angular-locale_ckb.js" />
+    <Content Include="Scripts\i18n\angular-locale_cs-cz.js" />
+    <Content Include="Scripts\i18n\angular-locale_cs.js" />
+    <Content Include="Scripts\i18n\angular-locale_cy-gb.js" />
+    <Content Include="Scripts\i18n\angular-locale_cy.js" />
+    <Content Include="Scripts\i18n\angular-locale_da-dk.js" />
+    <Content Include="Scripts\i18n\angular-locale_da-gl.js" />
+    <Content Include="Scripts\i18n\angular-locale_da.js" />
+    <Content Include="Scripts\i18n\angular-locale_dav-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_dav.js" />
+    <Content Include="Scripts\i18n\angular-locale_de-at.js" />
+    <Content Include="Scripts\i18n\angular-locale_de-be.js" />
+    <Content Include="Scripts\i18n\angular-locale_de-ch.js" />
+    <Content Include="Scripts\i18n\angular-locale_de-de.js" />
+    <Content Include="Scripts\i18n\angular-locale_de-li.js" />
+    <Content Include="Scripts\i18n\angular-locale_de-lu.js" />
+    <Content Include="Scripts\i18n\angular-locale_de.js" />
+    <Content Include="Scripts\i18n\angular-locale_dje-ne.js" />
+    <Content Include="Scripts\i18n\angular-locale_dje.js" />
+    <Content Include="Scripts\i18n\angular-locale_dsb-de.js" />
+    <Content Include="Scripts\i18n\angular-locale_dsb.js" />
+    <Content Include="Scripts\i18n\angular-locale_dua-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_dua.js" />
+    <Content Include="Scripts\i18n\angular-locale_dyo-sn.js" />
+    <Content Include="Scripts\i18n\angular-locale_dyo.js" />
+    <Content Include="Scripts\i18n\angular-locale_dz-bt.js" />
+    <Content Include="Scripts\i18n\angular-locale_dz.js" />
+    <Content Include="Scripts\i18n\angular-locale_ebu-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_ebu.js" />
+    <Content Include="Scripts\i18n\angular-locale_ee-gh.js" />
+    <Content Include="Scripts\i18n\angular-locale_ee-tg.js" />
+    <Content Include="Scripts\i18n\angular-locale_ee.js" />
+    <Content Include="Scripts\i18n\angular-locale_el-cy.js" />
+    <Content Include="Scripts\i18n\angular-locale_el-gr.js" />
+    <Content Include="Scripts\i18n\angular-locale_el.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-001.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-150.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ag.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ai.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-as.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-au.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-bb.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-be.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-bm.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-bs.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-bw.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-bz.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ca.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-cc.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ck.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-cx.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-dg.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-dm.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-er.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-fj.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-fk.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-fm.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-gb.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-gd.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-gg.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-gh.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-gi.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-gm.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-gu.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-gy.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-hk.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ie.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-im.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-io.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-iso.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-je.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-jm.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ki.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-kn.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ky.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-lc.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-lr.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ls.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-mg.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-mh.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-mo.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-mp.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ms.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-mt.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-mu.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-mw.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-my.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-na.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-nf.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ng.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-nr.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-nu.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-nz.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-pg.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ph.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-pk.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-pn.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-pr.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-pw.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-rw.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-sb.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-sc.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-sd.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-sg.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-sh.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-sl.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ss.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-sx.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-sz.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-tc.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-tk.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-to.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-tt.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-tv.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-tz.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ug.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-um.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-us.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-vc.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-vg.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-vi.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-vu.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-ws.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-za.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-zm.js" />
+    <Content Include="Scripts\i18n\angular-locale_en-zw.js" />
+    <Content Include="Scripts\i18n\angular-locale_en.js" />
+    <Content Include="Scripts\i18n\angular-locale_eo-001.js" />
+    <Content Include="Scripts\i18n\angular-locale_eo.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-419.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-ar.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-bo.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-cl.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-co.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-cr.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-cu.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-do.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-ea.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-ec.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-es.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-gq.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-gt.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-hn.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-ic.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-mx.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-ni.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-pa.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-pe.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-ph.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-pr.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-py.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-sv.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-us.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-uy.js" />
+    <Content Include="Scripts\i18n\angular-locale_es-ve.js" />
+    <Content Include="Scripts\i18n\angular-locale_es.js" />
+    <Content Include="Scripts\i18n\angular-locale_et-ee.js" />
+    <Content Include="Scripts\i18n\angular-locale_et.js" />
+    <Content Include="Scripts\i18n\angular-locale_eu-es.js" />
+    <Content Include="Scripts\i18n\angular-locale_eu.js" />
+    <Content Include="Scripts\i18n\angular-locale_ewo-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_ewo.js" />
+    <Content Include="Scripts\i18n\angular-locale_fa-af.js" />
+    <Content Include="Scripts\i18n\angular-locale_fa-ir.js" />
+    <Content Include="Scripts\i18n\angular-locale_fa.js" />
+    <Content Include="Scripts\i18n\angular-locale_ff-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_ff-gn.js" />
+    <Content Include="Scripts\i18n\angular-locale_ff-mr.js" />
+    <Content Include="Scripts\i18n\angular-locale_ff-sn.js" />
+    <Content Include="Scripts\i18n\angular-locale_ff.js" />
+    <Content Include="Scripts\i18n\angular-locale_fi-fi.js" />
+    <Content Include="Scripts\i18n\angular-locale_fi.js" />
+    <Content Include="Scripts\i18n\angular-locale_fil-ph.js" />
+    <Content Include="Scripts\i18n\angular-locale_fil.js" />
+    <Content Include="Scripts\i18n\angular-locale_fo-fo.js" />
+    <Content Include="Scripts\i18n\angular-locale_fo.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-be.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-bf.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-bi.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-bj.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-bl.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-ca.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-cd.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-cf.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-cg.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-ch.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-ci.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-dj.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-dz.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-fr.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-ga.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-gf.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-gn.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-gp.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-gq.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-ht.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-km.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-lu.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-ma.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-mc.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-mf.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-mg.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-ml.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-mq.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-mr.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-mu.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-nc.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-ne.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-pf.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-pm.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-re.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-rw.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-sc.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-sn.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-sy.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-td.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-tg.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-tn.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-vu.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-wf.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr-yt.js" />
+    <Content Include="Scripts\i18n\angular-locale_fr.js" />
+    <Content Include="Scripts\i18n\angular-locale_fur-it.js" />
+    <Content Include="Scripts\i18n\angular-locale_fur.js" />
+    <Content Include="Scripts\i18n\angular-locale_fy-nl.js" />
+    <Content Include="Scripts\i18n\angular-locale_fy.js" />
+    <Content Include="Scripts\i18n\angular-locale_ga-ie.js" />
+    <Content Include="Scripts\i18n\angular-locale_ga.js" />
+    <Content Include="Scripts\i18n\angular-locale_gd-gb.js" />
+    <Content Include="Scripts\i18n\angular-locale_gd.js" />
+    <Content Include="Scripts\i18n\angular-locale_gl-es.js" />
+    <Content Include="Scripts\i18n\angular-locale_gl.js" />
+    <Content Include="Scripts\i18n\angular-locale_gsw-ch.js" />
+    <Content Include="Scripts\i18n\angular-locale_gsw-fr.js" />
+    <Content Include="Scripts\i18n\angular-locale_gsw-li.js" />
+    <Content Include="Scripts\i18n\angular-locale_gsw.js" />
+    <Content Include="Scripts\i18n\angular-locale_gu-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_gu.js" />
+    <Content Include="Scripts\i18n\angular-locale_guz-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_guz.js" />
+    <Content Include="Scripts\i18n\angular-locale_gv-im.js" />
+    <Content Include="Scripts\i18n\angular-locale_gv.js" />
+    <Content Include="Scripts\i18n\angular-locale_ha-latn-gh.js" />
+    <Content Include="Scripts\i18n\angular-locale_ha-latn-ne.js" />
+    <Content Include="Scripts\i18n\angular-locale_ha-latn-ng.js" />
+    <Content Include="Scripts\i18n\angular-locale_ha-latn.js" />
+    <Content Include="Scripts\i18n\angular-locale_ha.js" />
+    <Content Include="Scripts\i18n\angular-locale_haw-us.js" />
+    <Content Include="Scripts\i18n\angular-locale_haw.js" />
+    <Content Include="Scripts\i18n\angular-locale_he-il.js" />
+    <Content Include="Scripts\i18n\angular-locale_he.js" />
+    <Content Include="Scripts\i18n\angular-locale_hi-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_hi.js" />
+    <Content Include="Scripts\i18n\angular-locale_hr-ba.js" />
+    <Content Include="Scripts\i18n\angular-locale_hr-hr.js" />
+    <Content Include="Scripts\i18n\angular-locale_hr.js" />
+    <Content Include="Scripts\i18n\angular-locale_hsb-de.js" />
+    <Content Include="Scripts\i18n\angular-locale_hsb.js" />
+    <Content Include="Scripts\i18n\angular-locale_hu-hu.js" />
+    <Content Include="Scripts\i18n\angular-locale_hu.js" />
+    <Content Include="Scripts\i18n\angular-locale_hy-am.js" />
+    <Content Include="Scripts\i18n\angular-locale_hy.js" />
+    <Content Include="Scripts\i18n\angular-locale_ia-fr.js" />
+    <Content Include="Scripts\i18n\angular-locale_ia.js" />
+    <Content Include="Scripts\i18n\angular-locale_id-id.js" />
+    <Content Include="Scripts\i18n\angular-locale_id.js" />
+    <Content Include="Scripts\i18n\angular-locale_ig-ng.js" />
+    <Content Include="Scripts\i18n\angular-locale_ig.js" />
+    <Content Include="Scripts\i18n\angular-locale_ii-cn.js" />
+    <Content Include="Scripts\i18n\angular-locale_ii.js" />
+    <Content Include="Scripts\i18n\angular-locale_in.js" />
+    <Content Include="Scripts\i18n\angular-locale_is-is.js" />
+    <Content Include="Scripts\i18n\angular-locale_is.js" />
+    <Content Include="Scripts\i18n\angular-locale_it-ch.js" />
+    <Content Include="Scripts\i18n\angular-locale_it-it.js" />
+    <Content Include="Scripts\i18n\angular-locale_it-sm.js" />
+    <Content Include="Scripts\i18n\angular-locale_it.js" />
+    <Content Include="Scripts\i18n\angular-locale_iw.js" />
+    <Content Include="Scripts\i18n\angular-locale_ja-jp.js" />
+    <Content Include="Scripts\i18n\angular-locale_ja.js" />
+    <Content Include="Scripts\i18n\angular-locale_jgo-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_jgo.js" />
+    <Content Include="Scripts\i18n\angular-locale_jmc-tz.js" />
+    <Content Include="Scripts\i18n\angular-locale_jmc.js" />
+    <Content Include="Scripts\i18n\angular-locale_ka-ge.js" />
+    <Content Include="Scripts\i18n\angular-locale_ka.js" />
+    <Content Include="Scripts\i18n\angular-locale_kab-dz.js" />
+    <Content Include="Scripts\i18n\angular-locale_kab.js" />
+    <Content Include="Scripts\i18n\angular-locale_kam-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_kam.js" />
+    <Content Include="Scripts\i18n\angular-locale_kde-tz.js" />
+    <Content Include="Scripts\i18n\angular-locale_kde.js" />
+    <Content Include="Scripts\i18n\angular-locale_kea-cv.js" />
+    <Content Include="Scripts\i18n\angular-locale_kea.js" />
+    <Content Include="Scripts\i18n\angular-locale_khq-ml.js" />
+    <Content Include="Scripts\i18n\angular-locale_khq.js" />
+    <Content Include="Scripts\i18n\angular-locale_ki-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_ki.js" />
+    <Content Include="Scripts\i18n\angular-locale_kk-cyrl-kz.js" />
+    <Content Include="Scripts\i18n\angular-locale_kk-cyrl.js" />
+    <Content Include="Scripts\i18n\angular-locale_kk.js" />
+    <Content Include="Scripts\i18n\angular-locale_kkj-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_kkj.js" />
+    <Content Include="Scripts\i18n\angular-locale_kl-gl.js" />
+    <Content Include="Scripts\i18n\angular-locale_kl.js" />
+    <Content Include="Scripts\i18n\angular-locale_kln-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_kln.js" />
+    <Content Include="Scripts\i18n\angular-locale_km-kh.js" />
+    <Content Include="Scripts\i18n\angular-locale_km.js" />
+    <Content Include="Scripts\i18n\angular-locale_kn-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_kn.js" />
+    <Content Include="Scripts\i18n\angular-locale_ko-kp.js" />
+    <Content Include="Scripts\i18n\angular-locale_ko-kr.js" />
+    <Content Include="Scripts\i18n\angular-locale_ko.js" />
+    <Content Include="Scripts\i18n\angular-locale_kok-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_kok.js" />
+    <Content Include="Scripts\i18n\angular-locale_ks-arab-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_ks-arab.js" />
+    <Content Include="Scripts\i18n\angular-locale_ks.js" />
+    <Content Include="Scripts\i18n\angular-locale_ksb-tz.js" />
+    <Content Include="Scripts\i18n\angular-locale_ksb.js" />
+    <Content Include="Scripts\i18n\angular-locale_ksf-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_ksf.js" />
+    <Content Include="Scripts\i18n\angular-locale_ksh-de.js" />
+    <Content Include="Scripts\i18n\angular-locale_ksh.js" />
+    <Content Include="Scripts\i18n\angular-locale_kw-gb.js" />
+    <Content Include="Scripts\i18n\angular-locale_kw.js" />
+    <Content Include="Scripts\i18n\angular-locale_ky-cyrl-kg.js" />
+    <Content Include="Scripts\i18n\angular-locale_ky-cyrl.js" />
+    <Content Include="Scripts\i18n\angular-locale_ky.js" />
+    <Content Include="Scripts\i18n\angular-locale_lag-tz.js" />
+    <Content Include="Scripts\i18n\angular-locale_lag.js" />
+    <Content Include="Scripts\i18n\angular-locale_lb-lu.js" />
+    <Content Include="Scripts\i18n\angular-locale_lb.js" />
+    <Content Include="Scripts\i18n\angular-locale_lg-ug.js" />
+    <Content Include="Scripts\i18n\angular-locale_lg.js" />
+    <Content Include="Scripts\i18n\angular-locale_lkt-us.js" />
+    <Content Include="Scripts\i18n\angular-locale_lkt.js" />
+    <Content Include="Scripts\i18n\angular-locale_ln-ao.js" />
+    <Content Include="Scripts\i18n\angular-locale_ln-cd.js" />
+    <Content Include="Scripts\i18n\angular-locale_ln-cf.js" />
+    <Content Include="Scripts\i18n\angular-locale_ln-cg.js" />
+    <Content Include="Scripts\i18n\angular-locale_ln.js" />
+    <Content Include="Scripts\i18n\angular-locale_lo-la.js" />
+    <Content Include="Scripts\i18n\angular-locale_lo.js" />
+    <Content Include="Scripts\i18n\angular-locale_lt-lt.js" />
+    <Content Include="Scripts\i18n\angular-locale_lt.js" />
+    <Content Include="Scripts\i18n\angular-locale_lu-cd.js" />
+    <Content Include="Scripts\i18n\angular-locale_lu.js" />
+    <Content Include="Scripts\i18n\angular-locale_luo-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_luo.js" />
+    <Content Include="Scripts\i18n\angular-locale_luy-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_luy.js" />
+    <Content Include="Scripts\i18n\angular-locale_lv-lv.js" />
+    <Content Include="Scripts\i18n\angular-locale_lv.js" />
+    <Content Include="Scripts\i18n\angular-locale_mas-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_mas-tz.js" />
+    <Content Include="Scripts\i18n\angular-locale_mas.js" />
+    <Content Include="Scripts\i18n\angular-locale_mer-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_mer.js" />
+    <Content Include="Scripts\i18n\angular-locale_mfe-mu.js" />
+    <Content Include="Scripts\i18n\angular-locale_mfe.js" />
+    <Content Include="Scripts\i18n\angular-locale_mg-mg.js" />
+    <Content Include="Scripts\i18n\angular-locale_mg.js" />
+    <Content Include="Scripts\i18n\angular-locale_mgh-mz.js" />
+    <Content Include="Scripts\i18n\angular-locale_mgh.js" />
+    <Content Include="Scripts\i18n\angular-locale_mgo-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_mgo.js" />
+    <Content Include="Scripts\i18n\angular-locale_mk-mk.js" />
+    <Content Include="Scripts\i18n\angular-locale_mk.js" />
+    <Content Include="Scripts\i18n\angular-locale_ml-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_ml.js" />
+    <Content Include="Scripts\i18n\angular-locale_mn-cyrl-mn.js" />
+    <Content Include="Scripts\i18n\angular-locale_mn-cyrl.js" />
+    <Content Include="Scripts\i18n\angular-locale_mn.js" />
+    <Content Include="Scripts\i18n\angular-locale_mr-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_mr.js" />
+    <Content Include="Scripts\i18n\angular-locale_ms-latn-bn.js" />
+    <Content Include="Scripts\i18n\angular-locale_ms-latn-my.js" />
+    <Content Include="Scripts\i18n\angular-locale_ms-latn-sg.js" />
+    <Content Include="Scripts\i18n\angular-locale_ms-latn.js" />
+    <Content Include="Scripts\i18n\angular-locale_ms.js" />
+    <Content Include="Scripts\i18n\angular-locale_mt-mt.js" />
+    <Content Include="Scripts\i18n\angular-locale_mt.js" />
+    <Content Include="Scripts\i18n\angular-locale_mua-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_mua.js" />
+    <Content Include="Scripts\i18n\angular-locale_my-mm.js" />
+    <Content Include="Scripts\i18n\angular-locale_my.js" />
+    <Content Include="Scripts\i18n\angular-locale_naq-na.js" />
+    <Content Include="Scripts\i18n\angular-locale_naq.js" />
+    <Content Include="Scripts\i18n\angular-locale_nb-no.js" />
+    <Content Include="Scripts\i18n\angular-locale_nb-sj.js" />
+    <Content Include="Scripts\i18n\angular-locale_nb.js" />
+    <Content Include="Scripts\i18n\angular-locale_nd-zw.js" />
+    <Content Include="Scripts\i18n\angular-locale_nd.js" />
+    <Content Include="Scripts\i18n\angular-locale_ne-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_ne-np.js" />
+    <Content Include="Scripts\i18n\angular-locale_ne.js" />
+    <Content Include="Scripts\i18n\angular-locale_nl-aw.js" />
+    <Content Include="Scripts\i18n\angular-locale_nl-be.js" />
+    <Content Include="Scripts\i18n\angular-locale_nl-bq.js" />
+    <Content Include="Scripts\i18n\angular-locale_nl-cw.js" />
+    <Content Include="Scripts\i18n\angular-locale_nl-nl.js" />
+    <Content Include="Scripts\i18n\angular-locale_nl-sr.js" />
+    <Content Include="Scripts\i18n\angular-locale_nl-sx.js" />
+    <Content Include="Scripts\i18n\angular-locale_nl.js" />
+    <Content Include="Scripts\i18n\angular-locale_nmg-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_nmg.js" />
+    <Content Include="Scripts\i18n\angular-locale_nn-no.js" />
+    <Content Include="Scripts\i18n\angular-locale_nn.js" />
+    <Content Include="Scripts\i18n\angular-locale_nnh-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_nnh.js" />
+    <Content Include="Scripts\i18n\angular-locale_no-no.js" />
+    <Content Include="Scripts\i18n\angular-locale_no.js" />
+    <Content Include="Scripts\i18n\angular-locale_nr-za.js" />
+    <Content Include="Scripts\i18n\angular-locale_nr.js" />
+    <Content Include="Scripts\i18n\angular-locale_nso-za.js" />
+    <Content Include="Scripts\i18n\angular-locale_nso.js" />
+    <Content Include="Scripts\i18n\angular-locale_nus-sd.js" />
+    <Content Include="Scripts\i18n\angular-locale_nus.js" />
+    <Content Include="Scripts\i18n\angular-locale_nyn-ug.js" />
+    <Content Include="Scripts\i18n\angular-locale_nyn.js" />
+    <Content Include="Scripts\i18n\angular-locale_om-et.js" />
+    <Content Include="Scripts\i18n\angular-locale_om-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_om.js" />
+    <Content Include="Scripts\i18n\angular-locale_or-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_or.js" />
+    <Content Include="Scripts\i18n\angular-locale_os-ge.js" />
+    <Content Include="Scripts\i18n\angular-locale_os-ru.js" />
+    <Content Include="Scripts\i18n\angular-locale_os.js" />
+    <Content Include="Scripts\i18n\angular-locale_pa-arab-pk.js" />
+    <Content Include="Scripts\i18n\angular-locale_pa-arab.js" />
+    <Content Include="Scripts\i18n\angular-locale_pa-guru-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_pa-guru.js" />
+    <Content Include="Scripts\i18n\angular-locale_pa.js" />
+    <Content Include="Scripts\i18n\angular-locale_pl-pl.js" />
+    <Content Include="Scripts\i18n\angular-locale_pl.js" />
+    <Content Include="Scripts\i18n\angular-locale_ps-af.js" />
+    <Content Include="Scripts\i18n\angular-locale_ps.js" />
+    <Content Include="Scripts\i18n\angular-locale_pt-ao.js" />
+    <Content Include="Scripts\i18n\angular-locale_pt-br.js" />
+    <Content Include="Scripts\i18n\angular-locale_pt-cv.js" />
+    <Content Include="Scripts\i18n\angular-locale_pt-gw.js" />
+    <Content Include="Scripts\i18n\angular-locale_pt-mo.js" />
+    <Content Include="Scripts\i18n\angular-locale_pt-mz.js" />
+    <Content Include="Scripts\i18n\angular-locale_pt-pt.js" />
+    <Content Include="Scripts\i18n\angular-locale_pt-st.js" />
+    <Content Include="Scripts\i18n\angular-locale_pt-tl.js" />
+    <Content Include="Scripts\i18n\angular-locale_pt.js" />
+    <Content Include="Scripts\i18n\angular-locale_qu-bo.js" />
+    <Content Include="Scripts\i18n\angular-locale_qu-ec.js" />
+    <Content Include="Scripts\i18n\angular-locale_qu-pe.js" />
+    <Content Include="Scripts\i18n\angular-locale_qu.js" />
+    <Content Include="Scripts\i18n\angular-locale_rm-ch.js" />
+    <Content Include="Scripts\i18n\angular-locale_rm.js" />
+    <Content Include="Scripts\i18n\angular-locale_rn-bi.js" />
+    <Content Include="Scripts\i18n\angular-locale_rn.js" />
+    <Content Include="Scripts\i18n\angular-locale_ro-md.js" />
+    <Content Include="Scripts\i18n\angular-locale_ro-ro.js" />
+    <Content Include="Scripts\i18n\angular-locale_ro.js" />
+    <Content Include="Scripts\i18n\angular-locale_rof-tz.js" />
+    <Content Include="Scripts\i18n\angular-locale_rof.js" />
+    <Content Include="Scripts\i18n\angular-locale_ru-by.js" />
+    <Content Include="Scripts\i18n\angular-locale_ru-kg.js" />
+    <Content Include="Scripts\i18n\angular-locale_ru-kz.js" />
+    <Content Include="Scripts\i18n\angular-locale_ru-md.js" />
+    <Content Include="Scripts\i18n\angular-locale_ru-ru.js" />
+    <Content Include="Scripts\i18n\angular-locale_ru-ua.js" />
+    <Content Include="Scripts\i18n\angular-locale_ru.js" />
+    <Content Include="Scripts\i18n\angular-locale_rw-rw.js" />
+    <Content Include="Scripts\i18n\angular-locale_rw.js" />
+    <Content Include="Scripts\i18n\angular-locale_rwk-tz.js" />
+    <Content Include="Scripts\i18n\angular-locale_rwk.js" />
+    <Content Include="Scripts\i18n\angular-locale_sah-ru.js" />
+    <Content Include="Scripts\i18n\angular-locale_sah.js" />
+    <Content Include="Scripts\i18n\angular-locale_saq-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_saq.js" />
+    <Content Include="Scripts\i18n\angular-locale_sbp-tz.js" />
+    <Content Include="Scripts\i18n\angular-locale_sbp.js" />
+    <Content Include="Scripts\i18n\angular-locale_se-fi.js" />
+    <Content Include="Scripts\i18n\angular-locale_se-no.js" />
+    <Content Include="Scripts\i18n\angular-locale_se-se.js" />
+    <Content Include="Scripts\i18n\angular-locale_se.js" />
+    <Content Include="Scripts\i18n\angular-locale_seh-mz.js" />
+    <Content Include="Scripts\i18n\angular-locale_seh.js" />
+    <Content Include="Scripts\i18n\angular-locale_ses-ml.js" />
+    <Content Include="Scripts\i18n\angular-locale_ses.js" />
+    <Content Include="Scripts\i18n\angular-locale_sg-cf.js" />
+    <Content Include="Scripts\i18n\angular-locale_sg.js" />
+    <Content Include="Scripts\i18n\angular-locale_shi-latn-ma.js" />
+    <Content Include="Scripts\i18n\angular-locale_shi-latn.js" />
+    <Content Include="Scripts\i18n\angular-locale_shi-tfng-ma.js" />
+    <Content Include="Scripts\i18n\angular-locale_shi-tfng.js" />
+    <Content Include="Scripts\i18n\angular-locale_shi.js" />
+    <Content Include="Scripts\i18n\angular-locale_si-lk.js" />
+    <Content Include="Scripts\i18n\angular-locale_si.js" />
+    <Content Include="Scripts\i18n\angular-locale_sk-sk.js" />
+    <Content Include="Scripts\i18n\angular-locale_sk.js" />
+    <Content Include="Scripts\i18n\angular-locale_sl-si.js" />
+    <Content Include="Scripts\i18n\angular-locale_sl.js" />
+    <Content Include="Scripts\i18n\angular-locale_smn-fi.js" />
+    <Content Include="Scripts\i18n\angular-locale_smn.js" />
+    <Content Include="Scripts\i18n\angular-locale_sn-zw.js" />
+    <Content Include="Scripts\i18n\angular-locale_sn.js" />
+    <Content Include="Scripts\i18n\angular-locale_so-dj.js" />
+    <Content Include="Scripts\i18n\angular-locale_so-et.js" />
+    <Content Include="Scripts\i18n\angular-locale_so-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_so-so.js" />
+    <Content Include="Scripts\i18n\angular-locale_so.js" />
+    <Content Include="Scripts\i18n\angular-locale_sq-al.js" />
+    <Content Include="Scripts\i18n\angular-locale_sq-mk.js" />
+    <Content Include="Scripts\i18n\angular-locale_sq-xk.js" />
+    <Content Include="Scripts\i18n\angular-locale_sq.js" />
+    <Content Include="Scripts\i18n\angular-locale_sr-cyrl-ba.js" />
+    <Content Include="Scripts\i18n\angular-locale_sr-cyrl-me.js" />
+    <Content Include="Scripts\i18n\angular-locale_sr-cyrl-rs.js" />
+    <Content Include="Scripts\i18n\angular-locale_sr-cyrl-xk.js" />
+    <Content Include="Scripts\i18n\angular-locale_sr-cyrl.js" />
+    <Content Include="Scripts\i18n\angular-locale_sr-latn-ba.js" />
+    <Content Include="Scripts\i18n\angular-locale_sr-latn-me.js" />
+    <Content Include="Scripts\i18n\angular-locale_sr-latn-rs.js" />
+    <Content Include="Scripts\i18n\angular-locale_sr-latn-xk.js" />
+    <Content Include="Scripts\i18n\angular-locale_sr-latn.js" />
+    <Content Include="Scripts\i18n\angular-locale_sr.js" />
+    <Content Include="Scripts\i18n\angular-locale_ss-sz.js" />
+    <Content Include="Scripts\i18n\angular-locale_ss-za.js" />
+    <Content Include="Scripts\i18n\angular-locale_ss.js" />
+    <Content Include="Scripts\i18n\angular-locale_ssy-er.js" />
+    <Content Include="Scripts\i18n\angular-locale_ssy.js" />
+    <Content Include="Scripts\i18n\angular-locale_st-ls.js" />
+    <Content Include="Scripts\i18n\angular-locale_st-za.js" />
+    <Content Include="Scripts\i18n\angular-locale_st.js" />
+    <Content Include="Scripts\i18n\angular-locale_sv-ax.js" />
+    <Content Include="Scripts\i18n\angular-locale_sv-fi.js" />
+    <Content Include="Scripts\i18n\angular-locale_sv-se.js" />
+    <Content Include="Scripts\i18n\angular-locale_sv.js" />
+    <Content Include="Scripts\i18n\angular-locale_sw-cd.js" />
+    <Content Include="Scripts\i18n\angular-locale_sw-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_sw-tz.js" />
+    <Content Include="Scripts\i18n\angular-locale_sw-ug.js" />
+    <Content Include="Scripts\i18n\angular-locale_sw.js" />
+    <Content Include="Scripts\i18n\angular-locale_swc-cd.js" />
+    <Content Include="Scripts\i18n\angular-locale_swc.js" />
+    <Content Include="Scripts\i18n\angular-locale_ta-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_ta-lk.js" />
+    <Content Include="Scripts\i18n\angular-locale_ta-my.js" />
+    <Content Include="Scripts\i18n\angular-locale_ta-sg.js" />
+    <Content Include="Scripts\i18n\angular-locale_ta.js" />
+    <Content Include="Scripts\i18n\angular-locale_te-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_te.js" />
+    <Content Include="Scripts\i18n\angular-locale_teo-ke.js" />
+    <Content Include="Scripts\i18n\angular-locale_teo-ug.js" />
+    <Content Include="Scripts\i18n\angular-locale_teo.js" />
+    <Content Include="Scripts\i18n\angular-locale_tg-cyrl-tj.js" />
+    <Content Include="Scripts\i18n\angular-locale_tg-cyrl.js" />
+    <Content Include="Scripts\i18n\angular-locale_tg.js" />
+    <Content Include="Scripts\i18n\angular-locale_th-th.js" />
+    <Content Include="Scripts\i18n\angular-locale_th.js" />
+    <Content Include="Scripts\i18n\angular-locale_ti-er.js" />
+    <Content Include="Scripts\i18n\angular-locale_ti-et.js" />
+    <Content Include="Scripts\i18n\angular-locale_ti.js" />
+    <Content Include="Scripts\i18n\angular-locale_tig-er.js" />
+    <Content Include="Scripts\i18n\angular-locale_tig.js" />
+    <Content Include="Scripts\i18n\angular-locale_tl.js" />
+    <Content Include="Scripts\i18n\angular-locale_tn-bw.js" />
+    <Content Include="Scripts\i18n\angular-locale_tn-za.js" />
+    <Content Include="Scripts\i18n\angular-locale_tn.js" />
+    <Content Include="Scripts\i18n\angular-locale_to-to.js" />
+    <Content Include="Scripts\i18n\angular-locale_to.js" />
+    <Content Include="Scripts\i18n\angular-locale_tr-cy.js" />
+    <Content Include="Scripts\i18n\angular-locale_tr-tr.js" />
+    <Content Include="Scripts\i18n\angular-locale_tr.js" />
+    <Content Include="Scripts\i18n\angular-locale_ts-za.js" />
+    <Content Include="Scripts\i18n\angular-locale_ts.js" />
+    <Content Include="Scripts\i18n\angular-locale_twq-ne.js" />
+    <Content Include="Scripts\i18n\angular-locale_twq.js" />
+    <Content Include="Scripts\i18n\angular-locale_tzm-latn-ma.js" />
+    <Content Include="Scripts\i18n\angular-locale_tzm-latn.js" />
+    <Content Include="Scripts\i18n\angular-locale_tzm.js" />
+    <Content Include="Scripts\i18n\angular-locale_ug-arab-cn.js" />
+    <Content Include="Scripts\i18n\angular-locale_ug-arab.js" />
+    <Content Include="Scripts\i18n\angular-locale_ug.js" />
+    <Content Include="Scripts\i18n\angular-locale_uk-ua.js" />
+    <Content Include="Scripts\i18n\angular-locale_uk.js" />
+    <Content Include="Scripts\i18n\angular-locale_ur-in.js" />
+    <Content Include="Scripts\i18n\angular-locale_ur-pk.js" />
+    <Content Include="Scripts\i18n\angular-locale_ur.js" />
+    <Content Include="Scripts\i18n\angular-locale_uz-arab-af.js" />
+    <Content Include="Scripts\i18n\angular-locale_uz-arab.js" />
+    <Content Include="Scripts\i18n\angular-locale_uz-cyrl-uz.js" />
+    <Content Include="Scripts\i18n\angular-locale_uz-cyrl.js" />
+    <Content Include="Scripts\i18n\angular-locale_uz-latn-uz.js" />
+    <Content Include="Scripts\i18n\angular-locale_uz-latn.js" />
+    <Content Include="Scripts\i18n\angular-locale_uz.js" />
+    <Content Include="Scripts\i18n\angular-locale_vai-latn-lr.js" />
+    <Content Include="Scripts\i18n\angular-locale_vai-latn.js" />
+    <Content Include="Scripts\i18n\angular-locale_vai-vaii-lr.js" />
+    <Content Include="Scripts\i18n\angular-locale_vai-vaii.js" />
+    <Content Include="Scripts\i18n\angular-locale_vai.js" />
+    <Content Include="Scripts\i18n\angular-locale_ve-za.js" />
+    <Content Include="Scripts\i18n\angular-locale_ve.js" />
+    <Content Include="Scripts\i18n\angular-locale_vi-vn.js" />
+    <Content Include="Scripts\i18n\angular-locale_vi.js" />
+    <Content Include="Scripts\i18n\angular-locale_vo-001.js" />
+    <Content Include="Scripts\i18n\angular-locale_vo.js" />
+    <Content Include="Scripts\i18n\angular-locale_vun-tz.js" />
+    <Content Include="Scripts\i18n\angular-locale_vun.js" />
+    <Content Include="Scripts\i18n\angular-locale_wae-ch.js" />
+    <Content Include="Scripts\i18n\angular-locale_wae.js" />
+    <Content Include="Scripts\i18n\angular-locale_wal-et.js" />
+    <Content Include="Scripts\i18n\angular-locale_wal.js" />
+    <Content Include="Scripts\i18n\angular-locale_xh-za.js" />
+    <Content Include="Scripts\i18n\angular-locale_xh.js" />
+    <Content Include="Scripts\i18n\angular-locale_xog-ug.js" />
+    <Content Include="Scripts\i18n\angular-locale_xog.js" />
+    <Content Include="Scripts\i18n\angular-locale_yav-cm.js" />
+    <Content Include="Scripts\i18n\angular-locale_yav.js" />
+    <Content Include="Scripts\i18n\angular-locale_yi-001.js" />
+    <Content Include="Scripts\i18n\angular-locale_yi.js" />
+    <Content Include="Scripts\i18n\angular-locale_yo-bj.js" />
+    <Content Include="Scripts\i18n\angular-locale_yo-ng.js" />
+    <Content Include="Scripts\i18n\angular-locale_yo.js" />
+    <Content Include="Scripts\i18n\angular-locale_zgh-ma.js" />
+    <Content Include="Scripts\i18n\angular-locale_zgh.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh-cn.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh-hans-cn.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh-hans-hk.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh-hans-mo.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh-hans-sg.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh-hans.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh-hant-hk.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh-hant-mo.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh-hant-tw.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh-hant.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh-hk.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh-tw.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh.js" />
+    <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
+    <Content Include="Scripts\i18n\angular-locale_zu.js" />
+    <Content Include="app\join\joinchannel.html" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\plugins\metisMenu\jquery.metisMenu.js" />
+    <Content Include="Scripts\plugins\pace\pace.min.js" />
+    <Content Include="Scripts\plugins\slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="Scripts\SendBird.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Minor.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Navigation.cshtml" />
+    <Content Include="Views\Shared\_TopNavbar.cshtml" />
+    <Content Include="Scripts\version.json" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-resource.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-route.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59911</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59328/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
